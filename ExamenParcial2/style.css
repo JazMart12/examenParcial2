@@ -499,7 +499,7 @@ body::selection {
 }
 
 .project-card-1 {
-  background: linear-gradient(180deg, #16191e, #252628);
+  background: linear-gradient(180deg, #372727, #3f2121);
 }
 
 .project-card-2 {
@@ -990,7 +990,7 @@ p {
 }
  
 strong {
-  background: #fff;
+  background: #000000;
   border-radius: 100%;
   color: #222;
   font-size: 1.5em;
@@ -1002,19 +1002,19 @@ strong {
 
 }
 .cardBox:nth-child(1) .card .back {
-  background: cornflowerblue;
+  background: #64f4ac;
 }
  
 .cardBox:nth-child(2) .card .back {
-  background: orange;
+  background: #64f4ac;
 }
  
 .cardBox:nth-child(3) .card .back {
-  background: yellowgreen;
+  background: #64f4ac;
 }
  
 .cardBox:nth-child(4) .card .back {
-  background: tomato;
+  background: #64f4ac;
 }
 .cardBox:nth-child(2) .card {
   -webkit-animation: giro 1.5s 1;
