@@ -926,3 +926,19 @@ body::selection {
 .social-icons a:nth-child(1) i:hover {
   color: #3b5998;
 }
+
+.carousel-container {
+  display: flex;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  min-width: 100%;
+}
+
+img {
+  max-width: 100%;
+  max-height: 1000px;
+  width: auto;
+  height: auto;
+}
