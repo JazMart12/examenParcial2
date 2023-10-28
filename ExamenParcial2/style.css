@@ -944,6 +944,12 @@ img {
 }
 
 /* Aqui empiezan los estilos de la pagina servicios */
+#cajasp{
+  background-color: #222;
+}
+.boxesContainer{
+  background-color: #222;
+}
 
 .cardBox {
   float: left;
@@ -952,13 +958,14 @@ img {
   perspective: 800px;
   transition: all 0.3s ease 0s;
   width: 23.7%;
+  background-color: #222;
 }
 
 .cardBox:hover .card {
   transform: rotateY(180deg);
 }
 .card {
-  background: #222;
+  background-color: #222;
   cursor: default;
   height: 300px;
   transform-style: preserve-3d;
@@ -978,6 +985,7 @@ img {
   position: absolute;
   text-align: center;
   width: 100%;
+  background-color: #222;
 }
 
 .back {
@@ -990,7 +998,7 @@ p {
 }
  
 strong {
-  background: #000000;
+  background: #fff;
   border-radius: 100%;
   color: #222;
   font-size: 1.5em;
@@ -998,9 +1006,6 @@ strong {
   padding: 0 7px 4px 6px;
 }
  
-#caja{
-
-}
 .cardBox:nth-child(1) .card .back {
   background: #64f4ac;
 }
@@ -1064,6 +1069,7 @@ strong {
   }
 
 }
+
 
 @media screen and (max-width: 480px) {
 
