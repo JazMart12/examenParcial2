@@ -998,6 +998,9 @@ strong {
   padding: 0 7px 4px 6px;
 }
  
+#caja{
+
+}
 .cardBox:nth-child(1) .card .back {
   background: cornflowerblue;
 }
@@ -1061,7 +1064,6 @@ strong {
   }
 
 }
-
 
 @media screen and (max-width: 480px) {
 
