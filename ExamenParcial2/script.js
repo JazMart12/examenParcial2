@@ -4,6 +4,9 @@ const introduction_text = document.querySelectorAll('.introduction-text');
 const single_profile_card = document.querySelectorAll('.single-profile-card');
 const testimonial_card = document.querySelectorAll('.testimonial-card');
 
+const carousel = document.querySelector(".carousel-container");
+const slides = document.querySelectorAll(".carousel-slide");
+
 design_card_butttons.forEach((button, index) => {
     button.addEventListener('click', () => {
         introduction_text.forEach((introduction, introductionIndex) => {
@@ -42,3 +45,32 @@ single_profile_card.forEach((btn, index) => {
         });
     });
 });
+
+let currentSlide = 0;
+
+function showSlide(slideIndex) {
+    if (slideIndex < 0) {
+        currentSlide = slides.length - 1;
+    } else if (slideIndex >= slides.length) {
+        currentSlide = 0;
+    }
+
+    slides.forEach((slide) => {
+        slide.style.display = "none";
+    });
+
+    slides[currentSlide].style.display = "block";
+}
+
+function nextSlide() {
+    currentSlide++;
+    showSlide(currentSlide);
+}
+
+function autoChangeSlide() {
+    nextSlide();
+    setTimeout(autoChangeSlide, 3000); // Cambiar la imagen cada 3 segundos (3000 ms)
+}
+
+autoChangeSlide();
+
