@@ -21,6 +21,7 @@ require '../index.php';
     fclose($file);
     $url = "http://localhost/cursoPHP/examen/examenParcial2/ExamenParcial2/";
     echo '<script>window.location="'.$url.'"</script>';
+    echo "<br><a href='formulario.php'>regresar</a>";
 ?>
 </div>
 </body>

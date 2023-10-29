@@ -111,6 +111,9 @@ if (isset($_SESSION["usuario"])) {
                 </form>
             </div>
         </div>
+        <?php
+        header('Location: secreta.php');
+?>
     </div>
 
     <section id="content-body">
