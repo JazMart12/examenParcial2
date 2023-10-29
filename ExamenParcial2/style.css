@@ -1233,4 +1233,8 @@ strong {
   color:  #64f4ac;
   text-align: center;
 }
-
+.fa fa-envelope{
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+}
