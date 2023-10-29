@@ -17,8 +17,7 @@ require '../index.php';
 
     $file = fopen("contras.txt","a+");
     if (strpos($fileContent, $usuario) !== false || strpos($fileContent, $contra) !== false) {
-        echo "El usuario y/o contraseña ya existen en el archivo";
-
+        echo '<script> window.alert("El usuario y/o la contraseña ya existen en el archivo");</script>';
     }else{
         fwrite($file, $usuario." ".$contra."\r\n");
     }

@@ -50,6 +50,7 @@
             # Y salimos del script
             exit();
         }
+            date_default_timezone_set("America/Mexico_City");
             $hora = date('H'); // Obtiene la hora actual en formato de 24 horas (0-23)
             if ($hora >= 6 && $hora < 12) {
                 $saludo = "Buenos días";
