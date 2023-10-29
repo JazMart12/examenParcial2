@@ -3,7 +3,7 @@
 
 <?php
  
-require '../index.html';
+require '../index.php';
 
 ?>
 <div style="margin:100px;">

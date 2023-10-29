@@ -1,7 +1,7 @@
 <?php
 ob_start(); //por si no funciona el header location (activa almacenamiento en buffer de salida)
 $config['base_url'] = 'http://' . $_SERVER["SERVER_NAME"]; //nombre del servidor(dominio) en el que estas actualmente
-require '../index.html';
+require '../index.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,8 +42,8 @@ require '../index.html';
     # Luego de haber obtenido los valores, ya podemos comprobar:
     if ($band == 1) {
 
-       // session_start();
-
+        session_start();
+        $_SESSION["usuario"] = $usuario;
         
 
        $url = "http://localhost/cursoPHP/examen/examenParcial2/ExamenParcial2/";
