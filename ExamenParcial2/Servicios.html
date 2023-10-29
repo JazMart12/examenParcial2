@@ -290,14 +290,14 @@
   
     function incrementNumber(id, targetNumber) {
     var $number = $("#" + id);
-    var currentNumber = parseInt($number.text().replace("+", "")); // Obtener el número actual sin el signo de más
+    var currentNumber = parseInt($number.text().replace("+", ""));
     var step = Math.max(Math.floor(targetNumber / 200), 1);
     if (currentNumber < targetNumber) {
       currentNumber += step;
       if (currentNumber > targetNumber) {
         currentNumber = targetNumber;
       }
-      $number.text("+" + currentNumber); // Agregar el signo de más nuevamente
+      $number.text("+" + currentNumber);
       setTimeout(function() {
         incrementNumber(id, targetNumber);
       }, 50);
