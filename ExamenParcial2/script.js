@@ -74,3 +74,21 @@ function autoChangeSlide() {
 
 autoChangeSlide();
 
+document.addEventListener("DOMContentLoaded", function() {
+    const toggleButtons = document.querySelectorAll(".toggle-button");
+  
+    toggleButtons.forEach(button => {
+      button.addEventListener("click", function() {
+        const target = this.getAttribute("data-target");
+        const info = document.getElementById(target);
+  
+        if (info.style.display === "none" || info.style.display === "") {
+          info.style.display = "block";
+          button.textContent = "VER MENOS...";
+        } else {
+          info.style.display = "none";
+          button.textContent = "LEER MÁS...";
+        }
+      });
+    });
+  });
