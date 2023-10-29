@@ -317,7 +317,7 @@ if (isset($_SESSION["usuario"])) {
             <div class="footer-email-intro">
                 <h3>Informacion:</h3>
                 <h6>Email:</h6>
-                <h4>correo electronico</h4>
+                <h4>codecrafters@gmail.com</h4>
             </div>
             <div class="footer-nav-menu">
                 <ul class="footer-menu">
