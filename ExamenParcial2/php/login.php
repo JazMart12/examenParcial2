@@ -12,6 +12,7 @@ require '../index.php';
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <title>Login</title>
+    
 </head>
 
 <body>
@@ -53,9 +54,8 @@ require '../index.php';
         # No coinciden, asi  que simplemente imprimimos un
         # mensaje diciendo que es incorrecto
          
-        
-        
-        sleep(3);
+        echo '<script> window.alert("Usuario y/o contraseña incorrecto");</script>';
+        //sleep(3);
         $url = "http://localhost/cursoPHP/examen/examenParcial2/ExamenParcial2/";
         echo '<script>window.location="'.$url.'"</script>'; 
         exit(); 

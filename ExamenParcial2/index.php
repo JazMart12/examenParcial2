@@ -38,8 +38,9 @@ if (isset($_SESSION["usuario"])) {
         <div>
             <ul class="navbar-menu">
                 <li><a class="active" href="index.php">&lt; Inicio &gt;</a></li>
-                <li><a class="" href="Servicios.html">Servicios</a></li>
+                <li><a class="" href="servicios.html">Servicios</a></li>
                 <li><a class="" href="contacto.html">Contacto</a></li>
+                <li><a href="php/contrataciones.php">Contrataciones</a></li>
             </ul>
         </div>
         <div>
@@ -316,7 +317,7 @@ if (isset($_SESSION["usuario"])) {
             <div class="footer-email-intro">
                 <h3>Informacion:</h3>
                 <h6>Email:</h6>
-                <h4>correo electronico</h4>
+                <h4>codecrafters@gmail.com</h4>
             </div>
             <div class="footer-nav-menu">
                 <ul class="footer-menu">
