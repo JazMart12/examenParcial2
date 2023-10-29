@@ -7,8 +7,8 @@
     <title>Contrataciones</title>
     <script src="https://kit.fontawesome.com/e674bba739.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="../imagenes/logo-ConvertImage.ico">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/x-icon" href="../../imagenes/logo-ConvertImage.ico">
 
 </head>
 <body style="background-color: #222;">
@@ -32,10 +32,10 @@
         </div>
         <div>
             <ul class="navbar-menu">
-                <li><a class="" href="index.php">Inicio</a></li>
-                <li><a class="" href="Servicios.html">Servicios</a></li>
-                <li><a class="" href="contacto.html">Contacto</a></li>
-                <li><a class="active" href="contrataciones.html">&lt; Contrataciones &gt;</a></li>
+                <li><a class="" href="../index.php">Inicio</a></li>
+                <li><a class="" href="../Servicios.html">Servicios</a></li>
+                <li><a class="" href="../contacto.html">Contacto</a></li>
+                <li><a class="active" href="contrataciones.php">&lt; Contrataciones &gt;</a></li>
             </ul>
         </div>
         <div>
@@ -57,7 +57,7 @@
         <div class="col-md-6" style="background-color: #8899e5; color: black; padding-top: 30px;padding-bottom: 30px; border-radius: 30px; padding-left: 40px;padding-right: 40px;">
             <div class="contact-form">
                 <h2 style="font-size: 25px;font-weight: 700;text-align: center;">Formulario de Admición</h2>
-                <form action="php/procesar.php" method="post">
+                <form action="procesar.php" method="post">
                     <div class="form-group">
                         <label for="nombre">Nombre:</label>
                         <input type="text" class="form-control" id="nombre" name="nombre" required>

@@ -40,7 +40,7 @@ if (isset($_SESSION["usuario"])) {
                 <li><a class="active" href="index.php">&lt; Inicio &gt;</a></li>
                 <li><a class="" href="Servicios.html">Servicios</a></li>
                 <li><a class="" href="contacto.html">Contacto</a></li>
-                <li><a href="contrataciones.html">Contrataciones</a></li>
+                <li><a href="php/contrataciones.php">Contrataciones</a></li>
             </ul>
         </div>
         <div>
