@@ -46,8 +46,9 @@ require '../index.php';
         $_SESSION["usuario"] = $usuario;
         
 
-       $url = "http://localhost/cursoPHP/examen/examenParcial2/ExamenParcial2/";
-       echo '<script>window.location="'.$url.'"</script>';        
+       $url = "http://localhost/cursoPHP/examen/examenParcial2/ExamenParcial2/php/bienvenida.php";
+       echo '<script>window.location="'.$url.'"</script>';
+       exit();        
     } else {
         # No coinciden, asi  que simplemente imprimimos un
         # mensaje diciendo que es incorrecto
@@ -56,7 +57,8 @@ require '../index.php';
         
         sleep(3);
         $url = "http://localhost/cursoPHP/examen/examenParcial2/ExamenParcial2/";
-        echo '<script>window.location="'.$url.'"</script>';  
+        echo '<script>window.location="'.$url.'"</script>'; 
+        exit(); 
         
 
     }

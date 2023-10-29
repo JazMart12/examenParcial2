@@ -100,7 +100,7 @@ if (isset($_SESSION["usuario"])) {
                 
                     <p style="color: black;">Usuario: <input type="text" name="usser" required autofocus> </p>
                     <p style="color: black;">Correo: <input type="email" name="mail" required></p>
-                    <p style="color: black;">Contraseña: <input type="text" name="contra" required> </p>
+                    <p style="color: black;">Contraseña: <input type="password" name="contra" required> </p>
                  
                     
                 </div>
@@ -113,7 +113,7 @@ if (isset($_SESSION["usuario"])) {
             </div>
         </div>
         <?php
-        header('Location: secreta.php');
+        //header('Location: secreta.php');
 ?>
     </div>
 

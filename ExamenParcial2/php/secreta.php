@@ -15,7 +15,7 @@ session_start();
 
 if (empty($_SESSION["usuario"])) {
     # Lo redireccionamos al formulario de inicio de sesión
-    header("Location: index.php");
+    header("Location: ../index.php");
     # Y salimos del script
     exit();
 } 
