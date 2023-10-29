@@ -1282,3 +1282,13 @@ strong {
     margin-top: 7rem;
   }
 }
+
+.im-car:hover{
+  height: 50vh;
+  top: 75px;
+  left: 15px;
+  object-fit: cover;
+  transform: scale(1.4) rotate(-0deg);
+  transition: 0.3s ease-in-out;
+  transform: scale(1.6) rotate(-0deg);
+}
