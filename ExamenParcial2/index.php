@@ -1,3 +1,15 @@
+<?php
+// Iniciar o reanudar una sesión
+session_start();
+
+// Verificar si hay una sesión activa
+if (isset($_SESSION["usuario"])) {
+    $sesionActiva = false;
+} else {
+    $sesionActiva = true;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -60,7 +72,12 @@
                                     <button type="submit" class="btn btn-primary btn-block">Login</button>
                                 </div>
                                 <div class="form-group text-center">
+                                    
+                                    <small><a href="php/logout.php" id="cerrar_sesion">Cerrar sesion</a></small>
+                                    
+                                    
                                     <small><a href="#" data-toggle="modal" data-target="#modalPassword">Registrar cuenta</a></small>
+                                    
                                 </div>
                             </form>
                         </li>
