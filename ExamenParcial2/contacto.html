@@ -8,9 +8,9 @@
     <title>Code Crafters</title>
     <script src="https://kit.fontawesome.com/e674bba739.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
 </head>
-
 <body>
 
     <!-- Encabezado -->
@@ -42,12 +42,47 @@
                 </li>
             </ul>
         </div>
-        
-        
     </section>
 <!-- fin Encabezado -->
 
-
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="contact-info">
+                <h2>Información de Contacto</h2>
+                <p>¡Estamos aquí para ayudarte! Contáctanos para cualquier pregunta o comentario.</p>
+                <ul>
+                    <li><i class="fa fa-envelope"></i> Correo: ejemplo@email.com</li>
+                    <li><i class="fa fa-phone"></i> Teléfono: +1 123-456-7890</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6" style="">
+            <div class="contact-form">
+                <h2>Formulario de Contacto</h2>
+                <form action="formulario_contactanos.php" method="post">
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="correo">Correo:</label>
+                        <input type="email" class="form-control" id="correo" name="correo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="tel" class="form-control" id="telefono" name="telefono">
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Pie de pagina -->
     <section id="footer">
