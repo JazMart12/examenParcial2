@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="icon" type="image/x-icon" href="../imagenes/logo-ConvertImage.ico">
-
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="styles.css">
 </head>
 
 <body style="background-color: #222;">
@@ -281,209 +283,171 @@
 </div>
 </div>
 <script style="padding-top: 0;">
-
-  $(document).ready(function() {
-      $(window).on("scroll", function() {
-        myFunction();
-      });
+$(document).ready(function() {
+    $(window).on("scroll", function() {
+      myFunction();
     });
-  
-    function myFunction() {
-      incrementNumber("number1", 300);
-      incrementNumber("number2", 20);
-      incrementNumber("number3", 100000);
-      incrementNumber("number4", 200);
-    }
-  
-    function incrementNumber(id, targetNumber) {
-    var $number = $("#" + id);
-    var currentNumber = parseInt($number.text().replace("+", ""));
-    var step = Math.max(Math.floor(targetNumber / 200), 1);
-    if (currentNumber < targetNumber) {
-      currentNumber += step;
-      if (currentNumber > targetNumber) {
-        currentNumber = targetNumber;
-      }
-      $number.text("+" + currentNumber);
-      setTimeout(function() {
-        incrementNumber(id, targetNumber);
-      }, 50);
-    } else {
-      isCounting = false;
-    }
+  });
+
+  function myFunction() {
+    incrementNumber("number1", 300);
+    incrementNumber("number2", 20);
+    incrementNumber("number3", 100000);
+    incrementNumber("number4", 200);
   }
-  </script>
+
+  function incrementNumber(id, targetNumber) {
+  var $number = $("#" + id);
+  var currentNumber = parseInt($number.text().replace("+", ""));
+  var step = Math.max(Math.floor(targetNumber / 200), 1);
+  if (currentNumber < targetNumber) {
+    currentNumber += step;
+    if (currentNumber > targetNumber) {
+      currentNumber = targetNumber;
+    }
+    $number.text("+" + currentNumber);
+    setTimeout(function() {
+      incrementNumber(id, targetNumber);
+    }, 50);
+  } else {
+    isCounting = false;
+  }
+}
+</script>
 </section>
-
-
-<section style="text-align: center; padding-top: -20px;">
-  <h1 id="titulo-ten">Tendencias</h1>
-  <br>
-  <div class="card d-inline-block" style="width: 400px; margin-right: 10px; background: #222; padding-top: -20px;">
-    <img src="../imagenes/im1.avif" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title" style="color: #5b5b5b;">TECHNOLOGY</h5>
-      <p class="card-text" style="color: rgb(255, 255, 255); text-align: justify;">Modelos de IA Multi-industriales: Descifrando el Futuro de la Minería y Energía con FactorIT</p>
-      <a href="#" class="btn btn-primary" style="background: #222; color: aquamarine; border: none; text-align: left;">LEER MÁS...</a>
-    </div>
-  </div>
-  
-  <div class="card d-inline-block" style="width: 400px; margin-right: 10px; background: #222;">
-    <img src="../imagenes/im3.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title" style="color: #5b5b5b;">TECHNOLOGY</h5>
-      <p class="card-text" style="color: rgb(255, 255, 255); text-align: justify;">Automatización Inteligente: El Presente y Futuro de las Empresas Modernas</p>
-      <a href="#" class="btn btn-primary" style="background: #222; color: aquamarine; border: none; text-align: left;">LEER MÁS...</a>
-    </div>
-  </div>
-  
-  <div class="card d-inline-block" style="width: 400px; margin-right: 10px; background: #222;">
-    <img src="../imagenes/im4.avif" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title" style="color: #5b5b5b;">TECHNOLOGY</h5>
-      <p class="card-text" style="color: rgb(255, 255, 255); text-align: justify;">Descubriendo el Oro Digital: Cómo las Empresas Están Transformando Datos en Decisiones Estratégicas</p>
-      <a href="#" class="btn btn-primary" style="background: #222; color: aquamarine; border: none; text-align: left;">LEER MÁS...</a>
-=======
 <section>
-<div class="container">
-  <h1 id="titulo-ten" style="text-align: center;">Tendencias</h1>
-  <div class="row">
-    <div class="col-md-4">
-      <div class="card" style="background: #222;">
-        <img src="../imagenes/im1.avif" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title" style="color: #5b5b5b;">TECHNOLOGY</h5>
-          <p class="card-text" style="color: rgb(255, 255, 255); text-align: justify;">Modelos de IA Multi-industriales: Descifrando el Futuro de la Minería y Energía con FactorIT</p>
-          <a href="#" class="btn btn-primary toggle-button" data-target="info1" style="background: #222; color: aquamarine; border: none; text-align: left;">LEER MÁS...</a>
-        </div>
-        <div class="card-info" id="info1" style="display: none;">
-          <p>Más información sobre el primer artículo...</p>
-        </div>
-      </div>
-    </div>
-    
-    <div class="col-md-4">
-      <div class="card" style="background: #222;">
-        <img src="../imagenes/im3.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title" style="color: #5b5b5b;">TECHNOLOGY</h5>
-          <p class="card-text" style="color: rgb(255, 255, 255); text-align: justify;">Automatización Inteligente: El Presente y Futuro de las Empresas Modernas</p>
-          <a href="#" class="btn btn-primary toggle-button" data-target="info2" style="background: #222; color: aquamarine; border: none; text-align: left;">LEER MÁS...</a>
-        </div>
-        <div class="card-info" id="info2" style="display: none;">
-          <p>Más información sobre el segundo artículo...</p>
-        </div>
-      </div>
-    </div>
-    
-    <div class="col-md-4">
-      <div class="card" style="background: #222;">
-        <img src="../imagenes/im4.avif" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title" style="color: #5b5b5b;">TECHNOLOGY</h5>
-          <p class="card-text" style="color: rgb(255, 255, 255); text-align: justify;">Descubriendo el Oro Digital: Cómo las Empresas Están Transformando Datos en Decisiones Estratégicas</p>
-          <a href="#" class="btn btn-primary toggle-button" data-target="info3" style="background: #222; color: aquamarine; border: none; text-align: left;">LEER MÁS...</a>
-        </div>
-        <div class="card-info" id="info3" style="display: none;">
-          <p>Más información sobre el tercer artículo...</p>
-        </div>
-      </div>
+    <div class="container marketing" style="padding-top: 3rem;
+    padding-bottom: 3rem;
+    color: rgb(var(--bs-tertiary-color-rgb));">
 
-    </div>
-  </div>
-</div>
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+          <div class="col-lg-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+            <h2 class="fw-normal">Heading</h2>
+            <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
+            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+            <h2 class="fw-normal">Heading</h2>
+            <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
+            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+            <h2 class="fw-normal">Heading</h2>
+            <p>And lastly this, the third column of representative placeholder content.</p>
+            <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+    
+    
+        <!-- START THE FEATURETTES -->
+    
+        <hr class="featurette-divider">
+    
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">First featurette heading. <span class="text-body-secondary">It’ll blow your mind.</span></h2>
+            <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+          </div>
+          <div class="col-md-5">
+            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
+          </div>
+        </div>
+    
+        <hr class="featurette-divider">
+    
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span class="text-body-secondary">See for yourself.</span></h2>
+            <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
+          </div>
+        </div>
+    
+        <hr class="featurette-divider">
+    
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">And lastly, this one. <span class="text-body-secondary">Checkmate.</span></h2>
+            <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+          </div>
+          <div class="col-md-5">
+            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
+          </div>
+        </div>
+    
+        <hr class="featurette-divider">
+    
+        <!-- /END THE FEATURETTES -->
+    
+      </div><!-- /.container -->
 </section>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<div class="container">
-  <section>
-      <div class="row">
-          <div class="col-md-6">
-              <img src="../imagenes/3D Isometric Animated Pack - Illustrations.gif" alt="GIF"  style="border-radius: 20px;" >
-          </div>
-          <div class="col-md-6">
-              <h2 style="text-align: center; font-weight: 700; color:  #64f4ac;">Desarollemos el futuro <br> ¿Como lo hacemos?</h2>
-              <p style="text-align: center; text-align: justify;">Nuestro proceso de trabajo consiste en atender 
-                 y abordar problemas complejos, proponer e implementar soluciones reales y 
-                 alcanzables con entregables a corto, mediano y largo plazo.</p>
-                 <br>
-                 <p  style="text-align: center; text-align: justify;">Una vez que se identifican los problemas, es esencial realizar un análisis profundo para comprender las causas subyacentes
-                   y los impactos. Esto implica investigar y recopilar datos relevantes. Desarrollar soluciones realistas y alcanzables es una 
-                   parte crucial del proceso. Esto puede requerir la colaboración de expertos en el campo y la generación de ideas innovadoras.</p>
-          </div>
-      </div>
-  </section>
-</div>
 
-<!-- Pie de pagina -->
-<br>
-<br>
-<br>
-<br>
-    <section id="footer">
-        <div class="footer-left">
-            <h2>Vamos Hagamos cosas increibles juntos!</h2>
+<section id="footer">
+    <div class="footer-left">
+        <h2>Vamos Hagamos cosas increibles juntos!</h2>
 
-            <div class="email-form">
-                <h2>Empezar <span>diciendo hola</span></h2>
-                <input type="text" name="name" id="" placeholder="Tu nombre">
-                <input type="email" name="email" id="" placeholder="Ingresa tu Email">
-                <div>
-                    <input type="Numero" name="Numero de telefono" id="" placeholder="Numero de telefono">
-                    <button type="submit">Enviar</button>
-                </div>
-            </div>
-
-            <div class="footer-title">
-                <h3 class="title-first-name">
-                    Code
-                </h3>
-                <h3 class="title-last-name">
-                    Crafters
-                </h3>
+        <div class="email-form">
+            <h2>Empezar <span>diciendo hola</span></h2>
+            <input type="text" name="name" id="" placeholder="Tu nombre">
+            <input type="email" name="email" id="" placeholder="Ingresa tu Email">
+            <div>
+                <input type="Numero" name="Numero de telefono" id="" placeholder="Numero de telefono">
+                <button type="submit">Enviar</button>
             </div>
         </div>
-        <div class="footer-right">
-            <div class="footer-email-intro">
-                <h3>Informacion:</h3>
-                <h6>Email:</h6>
-                <h4>codecrafters@gmail.com</h4>
-            </div>
-            <div class="footer-nav-menu">
-                <ul class="footer-menu">
-                    <li><a class="active" href="#">&lt; Servicio &gt;</a></li>
-                    <li><a class="" href="#">Trabajos</a></li>
-                    <li><a class="" href="#">Notas</a></li>
-                    <li><a class="" href="#">Contactos</a></li>
-                </ul>
-            </div>
 
-
-            <div class="social-icons">
-                <a href="" target="_blank">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                </a>
-                <a href="" target="_blank">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-                <a href="" target="_blank">
-                    <i class="fa-brands fa-twitter"></i>
-                </a>
-                <a href="" target="_blank">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="" target="_blank">
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
-            </div>
+        <div class="footer-title">
+            <h3 class="title-first-name">
+                Code
+            </h3>
+            <h3 class="title-last-name">
+                Crafters
+            </h3>
         </div>
-    </section>
-    <!-- fin de pie de pagina -->
-    <script src="script.js"></script>
+    </div>
+    <div class="footer-right">
+        <div class="footer-email-intro">
+            <h3>Informacion:</h3>
+            <h6>Email:</h6>
+            <h4>codecrafters@gmail.com</h4>
+        </div>
+        <div class="footer-nav-menu">
+            <ul class="footer-menu">
+                <li><a class="active" href="#">&lt; Servicio &gt;</a></li>
+                <li><a class="" href="#">Trabajos</a></li>
+                <li><a class="" href="#">Notas</a></li>
+                <li><a class="" href="#">Contactos</a></li>
+            </ul>
+        </div>
+        <div class="social-icons">
+            <a href="" target="_blank">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="" target="_blank">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="" target="_blank">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+        </div>
+    </div>
+</section>
+<script src="script.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 
 </html>
