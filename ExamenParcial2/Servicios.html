@@ -170,7 +170,6 @@
 </section>
 <!--Aqui termina el collage-->
 
-
 <section id="cajasp">
 <div class="boxesContainer">
  
@@ -239,11 +238,112 @@
     </div>
    
   </div>
+  <br>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" style="padding-top: 0;"></script>
+<div id="projectFacts" class="sectionClass">
+  <div class="fullwidth height columns">
+    <div class="factswrap" onscroll="myFunction()">
+      <div class="item fadeupbig animated animated" data-number="300" style="visibility: visible;">
+        <img src="" alt="">
+        <p id="number1" class="number" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">0</p>
+        <span class=""></span>
+        <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Clientes satisfechos</p>
+      </div>
+      <div class="item fadeupbig animated animated" data-number="20" style="visibility: visible;">
+        <img src="" alt="">
+        <p id="number2" class="number" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">0</p>
+        <span class=""></span>
+        <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Innovándonos en el mercado</p>
+      </div>
+      <div class="item fadeupbig animated animated" data-number="100000" style="visibility: visible;">
+        <img src="" alt="">
+        <p id="number3" class="number" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">0</p>
+        <span class=""></span>
+        <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Líneas de código</p>
+      </div>
+      <div class="item fadeupbig animated animated" data-number="200" style="visibility: visible;">
+        <img src="" alt="">
+        <p id="number4" class="number" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">0</p>
+        <span class=""></span>
+        <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Desarrollos de software a la medida</p>
+      </div>                  
+    </div>
+  </div>
+</div>
+</div>
+<script style="padding-top: 0;">
+
+  $(document).ready(function() {
+      $(window).on("scroll", function() {
+        myFunction();
+      });
+    });
+  
+    function myFunction() {
+      incrementNumber("number1", 300);
+      incrementNumber("number2", 20);
+      incrementNumber("number3", 100000);
+      incrementNumber("number4", 200);
+    }
+  
+    function incrementNumber(id, targetNumber) {
+    var $number = $("#" + id);
+    var currentNumber = parseInt($number.text().replace("+", "")); // Obtener el número actual sin el signo de más
+    var step = Math.max(Math.floor(targetNumber / 200), 1);
+    if (currentNumber < targetNumber) {
+      currentNumber += step;
+      if (currentNumber > targetNumber) {
+        currentNumber = targetNumber;
+      }
+      $number.text("+" + currentNumber); // Agregar el signo de más nuevamente
+      setTimeout(function() {
+        incrementNumber(id, targetNumber);
+      }, 50);
+    } else {
+      isCounting = false;
+    }
+  }
+  </script>
+
+
+<section style="text-align: center; padding-top: 0;">
+  <h1>TENDENCIAS</h1>
+  <br>
+  <div class="card d-inline-block" style="width: 400px; margin-right: 10px; background: #222;">
+    <img src="../imagenes/im1.avif" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title" style="color: #5b5b5b;">TECHNOLOGY</h5>
+      <p class="card-text" style="color: rgb(255, 255, 255); text-align: justify;">Modelos de IA Multi-industriales: Descifrando el Futuro de la Minería y Energía con FactorIT</p>
+      <a href="#" class="btn btn-primary" style="background: #222; color: aquamarine; border: none; text-align: left;">LEER MÁS...</a>
+    </div>
+  </div>
+  
+  <div class="card d-inline-block" style="width: 400px; margin-right: 10px; background: #222;">
+    <img src="../imagenes/im3.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title" style="color: #5b5b5b;">TECHNOLOGY</h5>
+      <p class="card-text" style="color: rgb(255, 255, 255); text-align: justify;">Automatización Inteligente: El Presente y Futuro de las Empresas Modernas</p>
+      <a href="#" class="btn btn-primary" style="background: #222; color: aquamarine; border: none; text-align: left;">LEER MÁS...</a>
+    </div>
+  </div>
+  
+  <div class="card d-inline-block" style="width: 400px; margin-right: 10px; background: #222;">
+    <img src="../imagenes/im4.avif" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title" style="color: #5b5b5b;">TECHNOLOGY</h5>
+      <p class="card-text" style="color: rgb(255, 255, 255); text-align: justify;">Descubriendo el Oro Digital: Cómo las Empresas Están Transformando Datos en Decisiones Estratégicas</p>
+      <a href="#" class="btn btn-primary" style="background: #222; color: aquamarine; border: none; text-align: left;">LEER MÁS...</a>
+    </div>
+  </div>
 </section>
 
-
-
 <!-- Pie de pagina -->
+<br>
+<br>
+<br>
+<br>
     <section id="footer">
         <div class="footer-left">
             <h2>Vamos Hagamos cosas increibles juntos!</h2>
