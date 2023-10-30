@@ -45,17 +45,15 @@ require '../index.php';
 
         session_start();
         $_SESSION["usuario"] = $usuario;
-        
-<<<<<<< HEAD
 
        $url = "http://localhost/cursophp/examenParcial2/ExamenParcial2/php/bienvenida.php";
-=======
+
         $domain = $_SERVER['HTTP_HOST'];
         $scheme = $_SERVER['REQUEST_SCHEME'];
         $uri = $_SERVER['REQUEST_URI'];
         $uri = substr($uri,0,-14);
         $url =  $scheme . "://" . $domain. $uri. "/php/bienvenida.php";
->>>>>>> d582437302ac3696621f6dcadbe3b59ee052028b
+
        echo '<script>window.location="'.$url.'"</script>';
        exit();        
     } else {
@@ -64,15 +62,14 @@ require '../index.php';
          
         echo '<script> window.alert("Usuario y/o contraseña incorrecto");</script>';
         //sleep(3);
-<<<<<<< HEAD
+
         $url = "http://localhost/cursophp/examenParcial2/ExamenParcial2/index.php";
-=======
+
         $domain = $_SERVER['HTTP_HOST'];
         $scheme = $_SERVER['REQUEST_SCHEME'];
         $uri = $_SERVER['REQUEST_URI'];
         $uri = substr($uri,0,-14);// Elimina los últimos 14 caracteres
         $url =  $scheme . "://" . $domain. $uri;
->>>>>>> d582437302ac3696621f6dcadbe3b59ee052028b
         echo '<script>window.location="'.$url.'"</script>'; 
         exit(); 
         
