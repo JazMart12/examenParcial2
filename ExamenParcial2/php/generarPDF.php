@@ -116,7 +116,8 @@ if($ban==0){
     
     fwrite($file, $usuario." ".$claveAleatoria."\r\n");
     fclose($file);
-
+$file = fopen("correos.txt","a+");
+fwrite($file,$usuario." ".$correo."\r\n");
 $pdf->Cell(60,55,"Tu clave: $claveAleatoria",0,1);
 
 

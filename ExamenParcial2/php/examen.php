@@ -49,115 +49,39 @@
     <?php
         session_start();
         $usuario = $_SESSION["usuario"];    
-        $clave = "";
-        $file = fopen("claves.txt", "r");
-        $band = 0; //para saber si la cuenta y contrasena estan en el archivo
+        $file = fopen("examen.txt", "r");
+        //primero hay que verificar si el usuario ya hizo el examen
+        $band = 0; //para saber si la cuenta esta en el archivo
         while (!feof($file)) {
             $linea = fgets($file);
             if ($linea != "") {
-                $aux = preg_split("/[\s,]+/", $linea); 
-                $user = $aux[0];
-                $aux = $aux[1];
+                $user = $linea;
                 if ($user === $usuario) {
-                    $clave = $aux;
                     $band = 1;
                     break;
                 }
             }
         }
         fclose($file);
-
-        if(!$band){
-            echo '<script> window.alert("Por favor consigue tu clave de acceso rellenando el formulario");</script>';
+        if($band==1){
             $domain = $_SERVER['HTTP_HOST'];
             $scheme = $_SERVER['REQUEST_SCHEME'];
             $uri = $_SERVER['REQUEST_URI'];
-            $uri = substr($uri,0,-14);// Elimina los últimos 14 caracteres
+            $uri = substr($uri,0,-14);
             $url =  $scheme . "://" . $domain. $uri;
-            echo '<script>window.location="'.$url.'"</script>'; 
-            exit();
+            echo '<script>window.location="'.$url.'"</script>';
+            exit();        
         }
+        
     ?>
-<h1>Cuestionario de Programación</h1>
 
-  <form class="exam">
-    <ol>
-      <li>
-        <p>1. ¿Qué es un bucle?</p>
-        <input type="radio" name="q1" value="A"> A) Una función en Python.<br>
-        <input type="radio" name="q1" value="B"> B) Una estructura de control que repite una serie de instrucciones.<br>
-        <input type="radio" name="q1" value="C"> C) Un tipo de variable en Java.<br>
-        <input type="radio" name="q1" value="D"> D) Un error en un programa.<br>
-      </li>
-      <li>
-        <p>2. ¿Qué es la programación orientada a objetos (POO)?</p>
-        <input type="radio" name="q2" value="A"> A) Un lenguaje de programación.<br>
-        <input type="radio" name="q2" value="B"> B) Un paradigma de programación que utiliza objetos como componentes de software.<br>
-        <input type="radio" name="q2" value="C"> C) Un tipo de base de datos.<br>
-        <input type="radio" name="q2" value="D"> D) Un sistema operativo.<br>
-      </li>
-      <li>
-        <p>3.  ¿Cuál es la función principal de una variable en programación?</p>
-        <input type="radio" name="q3" value="A"> A) Almacenar datos temporales.<br>
-        <input type="radio" name="q3" value="B"> B) Imprimir texto en la pantalla.<br>
-        <input type="radio" name="q3" value="C"> C) Ejecutar una función.<br>
-        <input type="radio" name="q3" value="D"> D) Controlar el flujo de un programa.<br>
-      </li>
-      <li>
-        <p>4.  ¿Qué significa "DRY" en programación?</p>
-        <input type="radio" name="q4" value="A"> A)	No programar en días de lluvia.<br>
-        <input type="radio" name="q4" value="B"> B)	"Don't Repeat Yourself", un principio que promueve la reutilización de código.<br>
-        <input type="radio" name="q4" value="C"> C)	Una herramienta de desarrollo web.<br>
-        <input type="radio" name="q4" value="D"> D)	Una palabra clave en C++.<br>
-      </li>
-      <li>
-        <p>5. ¿Cuál es el propósito principal de un array en programación?</p>
-        <input type="radio" name="q5" value="A"> A)	Almacenar una única variable.<br>
-        <input type="radio" name="q5" value="B"> B)	Realizar operaciones matemáticas.<br>
-        <input type="radio" name="q5" value="C"> C)	Almacenar múltiples valores del mismo tipo.<br>
-        <input type="radio" name="q5" value="D"> D)	Controlar el flujo de un programa.<br>
-      </li>
-      <li>
-        <p>6. ¿Qué es la depuración en programación?</p>
-        <input type="radio" name="q6" value="A"> A)	Un proceso de ocultar errores en el código.<br>
-        <input type="radio" name="q6" value="B"> B)	Un proceso de eliminar el código innecesario.<br>
-        <input type="radio" name="q6" value="C"> C)	Un proceso de encontrar y corregir errores en el código.<br>
-        <input type="radio" name="q6" value="D"> D)	Un proceso de crear un nuevo programa.<br>
-      </li>
-      <li>
-        <p>7. ¿Qué es un algoritmo?</p>
-        <input type="radio" name="q7" value="A"> A)	Un error en un programa.<br>
-        <input type="radio" name="q7" value="B"> B)	Un conjunto de instrucciones para resolver un problema.<br>
-        <input type="radio" name="q7" value="C"> C)	Un lenguaje de programación.<br>
-        <input type="radio" name="q7" value="D"> D)	Un sistema operativo.<br>
-      </li>
-      <li>
-        <p>8. ¿Qué es la recursividad en programación?</p>
-        <input type="radio" name="q8" value="A"> A)	Un tipo de error de lógica.<br>
-        <input type="radio" name="q8" value="B"> B)	Un bucle que se ejecuta infinitamente.<br>
-        <input type="radio" name="q8" value="C"> C)	Un enfoque en el que una función se llama a sí misma para resolver un problema.<br>
-        <input type="radio" name="q8" value="D"> D)	Una estructura de datos en Python.<br>
-      </li>
-      <li>
-        <p>9. ¿Cuál es el propósito de un IDE (Entorno de Desarrollo Integrado) en programación?</p>
-        <input type="radio" name="q9" value="A"> A)	Imprimir código en papel.<br>
-        <input type="radio" name="q9" value="B"> B)	Ejecutar programas en un servidor.<br>
-        <input type="radio" name="q9" value="C"> C)	Proporcionar herramientas para escribir, depurar y compilar código.<br>
-        <input type="radio" name="q9" value="D"> D)	Controlar la velocidad de ejecución de un programa.<br>
-      </li>
-      <li>
-        <p>10. ¿?</p>
-        <input type="radio" name="q10" value="A"> A)	Un sistema de clasificación de lenguajes de programación.<br>
-        <input type="radio" name="q10" value="B"> B)	Una técnica para ocultar el código fuente.<br>
-        <input type="radio" name="q10" value="C"> C)	Un proceso de seguimiento de cambios en el código a lo largo del tiempo.<br>
-        <input type="radio" name="q10" value="D"> D)	Un método para optimizar algoritmos.<br>
-      </li>
-    </ol>
-    <button type="submit">Enviar Respuestas</button>
-  </form>
-
-
-
+    <form action="preguntas.php" method="post">
+        <div class="form-group">
+            <label for="codigo">Ingresa tu codigo:</label>
+            <input type="text" class="input-form" require name="codigo" id="codigo">
+            <input type="submit" class="btn btn-dark" value="Enviar">
+        </div>
+    </form>
     <section id="footer">
     <div class="footer-left">
         <h2>Vamos Hagamos cosas increibles juntos!</h2>
