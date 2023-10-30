@@ -11,7 +11,7 @@
     <link rel="icon" type="image/x-icon" href="../../imagenes/logo-ConvertImage.ico">
     <meta http-equiv="refresh" content="4; URL=http://localhost/cursoPHP/examen/examenParcial2/ExamenParcial2" />
 </head>
-<body>
+
 <body style="background-color: #222;">
     <!-- Encabezado -->
     <section id="header">
