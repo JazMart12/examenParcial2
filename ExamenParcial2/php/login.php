@@ -46,7 +46,7 @@ require '../index.php';
         session_start();
         $_SESSION["usuario"] = $usuario;
 
-       $url = "http://localhost/cursophp/examenParcial2/ExamenParcial2/php/bienvenida.php";
+       //$url = "http://localhost/cursophp/examenParcial2/ExamenParcial2/php/bienvenida.php";
 
         $domain = $_SERVER['HTTP_HOST'];
         $scheme = $_SERVER['REQUEST_SCHEME'];

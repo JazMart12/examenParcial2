@@ -57,7 +57,7 @@
         <div class="col-md-6" style="background-color: #8899e5; color: black; padding-top: 30px;padding-bottom: 30px; border-radius: 30px; padding-left: 40px;padding-right: 40px;">
             <div class="contact-form">
                 <h2 style="font-size: 25px;font-weight: 700;text-align: center;">Formulario de Admición</h2>
-                <form action="procesar.php" method="post">
+                <form action="procesar2.php" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="nombre">Nombre:</label>
                         <input type="text" class="form-control" id="nombre" name="nombre" required>
