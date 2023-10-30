@@ -113,17 +113,17 @@
                     </div>
                     <div class="form-group">
                         <label for="telefono">Teléfono:</label>
-                        <input type="number" class="form-control" id="telefono" name="telefono">
+                        <input type="number" class="form-control" id="telefono" name="telefono" require>
                     </div><br>
-                    <label class="h6" for="ingles_no">Ingles</label><br>
+                    <label class="h6" for="ingles_no" >Ingles</label><br>
                     <div class="container">
                         <div class="row">
                             <div class="form-check col-3">
-                                <input class="form-check-input" type="radio" name="ingles" id="ingles_si" value="Isi">
+                                <input class="form-check-input" type="radio" name="ingles" id="ingles_si" value="Si">
                                 <label class="form-check-label" for="ingles_si">Si</label>
                             </div>
                             <div class="form-check col-3">
-                                <input class="form-check-input" type="radio" name="ingles" id="ingles_no" value="Ino">
+                                <input class="form-check-input" type="radio" name="ingles" id="ingles_no" value="No">
                                 <label class="form-check-label" for="ingles_no">No</label>
                             </div> 
                         </div>
@@ -132,17 +132,17 @@
                     <div class="container">
                         <div class="row">
                             <div class="form-check col-3">
-                                <input class="form-check-input" type="radio" name="viajar" id="viajar_si" value="Vsi">
+                                <input class="form-check-input" type="radio" name="viajar" id="viajar_si" value="Si">
                                 <label class="form-check-label" for="ingles_si">Si</label>
                             </div>
                             <div class="form-check col-3">
-                                <input class="form-check-input" type="radio" name="viajar" id="viajar_no" value="Vno">
+                                <input class="form-check-input" type="radio" name="viajar" id="viajar_no" value="No">
                                 <label class="form-check-label" for="viajar_no">No</label>
                             </div> 
                         </div>
                     </div>
                     <label class="h6" for="puesto">Puesto al que aplicas</label>
-                    <select name="puesto" id="puesto" class="form-select">
+                    <select name="puesto" id="puesto" class="form-select" require>
                         <option selected>Puesto</option>
                         <option value="front">Front-end</option>
                         <option value="back">Back-end</option>
