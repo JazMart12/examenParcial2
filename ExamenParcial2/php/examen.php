@@ -49,35 +49,32 @@
     <?php
         session_start();
         $usuario = $_SESSION["usuario"];    
-        $clave = "";
-        $file = fopen("claves.txt", "r");
-        $band = 0; //para saber si la cuenta y contrasena estan en el archivo
+        $file = fopen("examen.txt", "r");
+        //primero hay que verificar si el usuario ya hizo el examen
+        $band = 0; //para saber si la cuenta esta en el archivo
         while (!feof($file)) {
             $linea = fgets($file);
             if ($linea != "") {
-                $aux = preg_split("/[\s,]+/", $linea); 
-                $user = $aux[0];
-                $aux = $aux[1];
+                $user = $linea;
                 if ($user === $usuario) {
-                    $clave = $aux;
                     $band = 1;
                     break;
                 }
             }
         }
         fclose($file);
-
-        if(!$band){
-            echo '<script> window.alert("Por favor consigue tu clave de acceso rellenando el formulario");</script>';
+        if($band==1){
             $domain = $_SERVER['HTTP_HOST'];
             $scheme = $_SERVER['REQUEST_SCHEME'];
             $uri = $_SERVER['REQUEST_URI'];
-            $uri = substr($uri,0,-14);// Elimina los últimos 14 caracteres
+            $uri = substr($uri,0,-14);
             $url =  $scheme . "://" . $domain. $uri;
-            echo '<script>window.location="'.$url.'"</script>'; 
-            exit();
+            echo '<script>window.location="'.$url.'"</script>';
+            exit();        
         }
+        
     ?>
+<<<<<<< HEAD
 <h1>Examen de conocimientos</h1>
 
   <form class="exam">
@@ -157,7 +154,16 @@
   </form>
 
 
+=======
+>>>>>>> 48c5a391757cc1ac8c5fb0cf2ed418c3cbba1dd0
 
+    <form action="preguntas.php" method="post">
+        <div class="form-group">
+            <label for="codigo">Ingresa tu codigo:</label>
+            <input type="text" class="input-form" require name="codigo" id="codigo">
+            <input type="submit" class="btn btn-dark" value="Enviar">
+        </div>
+    </form>
     <section id="footer">
     <div class="footer-left">
         <h2>Vamos Hagamos cosas increibles juntos!</h2>
