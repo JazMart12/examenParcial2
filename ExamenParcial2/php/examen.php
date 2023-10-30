@@ -1,4 +1,3 @@
-<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,7 +43,43 @@
     </section>
 
 
+
 <h1 class="tit-exam">Examen de conocimientos</h1>
+
+    <?php
+        session_start();
+        $usuario = $_SESSION["usuario"];    
+        $clave = "";
+        $file = fopen("claves.txt", "r");
+        $band = 0; //para saber si la cuenta y contrasena estan en el archivo
+        while (!feof($file)) {
+            $linea = fgets($file);
+            if ($linea != "") {
+                $aux = preg_split("/[\s,]+/", $linea); 
+                $user = $aux[0];
+                $aux = $aux[1];
+                if ($user === $usuario) {
+                    $clave = $aux;
+                    $band = 1;
+                    break;
+                }
+            }
+        }
+        fclose($file);
+
+        if(!$band){
+            echo '<script> window.alert("Por favor consigue tu clave de acceso rellenando el formulario");</script>';
+            $domain = $_SERVER['HTTP_HOST'];
+            $scheme = $_SERVER['REQUEST_SCHEME'];
+            $uri = $_SERVER['REQUEST_URI'];
+            $uri = substr($uri,0,-14);// Elimina los últimos 14 caracteres
+            $url =  $scheme . "://" . $domain. $uri;
+            echo '<script>window.location="'.$url.'"</script>'; 
+            exit();
+        }
+    ?>
+<h1>Cuestionario de Programación</h1>
+
   <form class="exam">
     <ol>
       <li>

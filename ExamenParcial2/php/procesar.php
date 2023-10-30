@@ -1,7 +1,7 @@
 <?php 
 
     require('fpdf.php');
-
+    session_start();
     $nombre = $_POST["nombre"];
     $apellido1 = $_POST["apellido1"];
     $apellido2 = $_POST["apellido2"];
@@ -121,6 +121,25 @@ $pdf->SetFont('Arial','',12);
 for($i=0;$i<sizeof($lenguajesSeleccionados);$i++){
     $pdf->Cell(40,10,"$lenguajesSeleccionados[$i]",0,1);
 }
+function generarClaveAleatoria($longitud) {
+    $caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()';
+    $clave = '';
+    $caracteresLength = strlen($caracteres);
+
+    for ($i = 0; $i < $longitud; $i++) {
+        $clave .= $caracteres[rand(0, $caracteresLength - 1)];
+    }
+
+    return $clave;
+}
+
+$claveAleatoria = generarClaveAleatoria(8);
+$pdf->Cell(60,55,"Tu clave: $claveAleatoria",0,1);
+
+$usuario = $_SESSION["usuario"];
+$file = fopen("claves.txt","a+");
+fwrite($file, $usuario." ".$claveAleatoria."\r\n");
+fclose($file);
 
 $pdf->Image("imagenes/firma.jpg",20,230,33);
 $pdf->SetFont('Arial','I',10);
