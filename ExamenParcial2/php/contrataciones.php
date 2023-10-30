@@ -33,9 +33,10 @@
         <div>
             <ul class="navbar-menu">
                 <li><a class="" href="../index.php">Inicio</a></li>
-                <li><a class="" href="../Servicios.html">Servicios</a></li>
-                <li><a class="" href="../contacto.html">Contacto</a></li>
+                <li><a class="" href="../Servicios.php">Servicios</a></li>
+                <li><a class="" href="../contacto.php">Contacto</a></li>
                 <li><a class="active" href="contrataciones.php">&lt; Contrataciones &gt;</a></li>
+                
             </ul>
         </div>
         <div>
