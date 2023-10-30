@@ -47,7 +47,7 @@ require '../index.php';
         $_SESSION["usuario"] = $usuario;
         
 
-       $url = "http://localhost/cursoPHP/examen/examenParcial2/ExamenParcial2/php/bienvenida.php";
+       $url = "http://localhost/cursophp/examenParcial2/ExamenParcial2/php/bienvenida.php";
        echo '<script>window.location="'.$url.'"</script>';
        exit();        
     } else {
@@ -56,7 +56,7 @@ require '../index.php';
          
         echo '<script> window.alert("Usuario y/o contraseña incorrecto");</script>';
         //sleep(3);
-        $url = "http://localhost/cursoPHP/examen/examenParcial2/ExamenParcial2/";
+        $url = "http://localhost/cursophp/examenParcial2/ExamenParcial2/index.php";
         echo '<script>window.location="'.$url.'"</script>'; 
         exit(); 
         
