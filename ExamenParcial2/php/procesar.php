@@ -74,13 +74,17 @@ function Footer()
     $this->Cell(0,10,'Page '.$this->PageNo().'/{nb}',0,0,'C');
 }
 }
+date_default_timezone_set('America/Mexico_City');
 
+// Obtiene la fecha actual en la zona horaria de México
+$fechaActual = date("Y-m-d H:i:s"); // Formato: Año-Mes-Día Hora:Minuto:Segundo
 // Creación del objeto de la clase heredada
 $pdf = new PDF();
 //$pdf->AliasNbPages();
 $pdf->AddPage();
 $pdf->SetFont('Arial','B',14);
-$pdf->Cell(40,30,'Datos del Usuario:',0,1);
+$pdf->Cell(90,25,"Fecha: $fechaActual",0,1);
+$pdf->Cell(40,5,'Datos del Usuario:',0,1);
 $pdf->SetFont('Arial','',12);
 
 $pdf->Cell(40,10,"Nombre: $nombre",0,1);
@@ -118,7 +122,9 @@ for($i=0;$i<sizeof($lenguajesSeleccionados);$i++){
     $pdf->Cell(40,10,"$lenguajesSeleccionados[$i]",0,1);
 }
 
-//$pdf->Image($targetFile,60,15,33);
-
+$pdf->Image("imagenes/firma.jpg",20,230,33);
+$pdf->SetFont('Arial','I',10);
+$pdf->Cell(60,55,"Firma del director ejecutivo",0);
+$pdf->Cell(40,15,"Director Carlos C.  Martinez",0);
 $pdf->Output();
 ?>
