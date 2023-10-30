@@ -45,12 +45,15 @@ require '../index.php';
 
         session_start();
         $_SESSION["usuario"] = $usuario;
-        
+
+       $url = "http://localhost/cursophp/examenParcial2/ExamenParcial2/php/bienvenida.php";
+
         $domain = $_SERVER['HTTP_HOST'];
         $scheme = $_SERVER['REQUEST_SCHEME'];
         $uri = $_SERVER['REQUEST_URI'];
         $uri = substr($uri,0,-14);
         $url =  $scheme . "://" . $domain. $uri. "/php/bienvenida.php";
+
        echo '<script>window.location="'.$url.'"</script>';
        exit();        
     } else {
@@ -59,6 +62,9 @@ require '../index.php';
          
         echo '<script> window.alert("Usuario y/o contraseña incorrecto");</script>';
         //sleep(3);
+
+        $url = "http://localhost/cursophp/examenParcial2/ExamenParcial2/index.php";
+
         $domain = $_SERVER['HTTP_HOST'];
         $scheme = $_SERVER['REQUEST_SCHEME'];
         $uri = $_SERVER['REQUEST_URI'];

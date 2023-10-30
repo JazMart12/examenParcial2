@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="icon" type="image/x-icon" href="../../imagenes/logo-ConvertImage.ico">
 </head>
-<body>
 <body style="background-color: #222;">
     <!-- Encabezado -->
     <section id="header">
