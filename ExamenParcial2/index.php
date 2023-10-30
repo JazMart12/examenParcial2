@@ -100,7 +100,7 @@ if (isset($_SESSION["usuario"])) {
                 <div class="modal-body">
                 
                     <p style="color: black;">Usuario: <input type="text" name="usser" required autofocus> </p>
-                    <p style="color: black;">Correo: <input type="email" name="mail" required></p>
+                    <!--<p style="color: black;">Correo: <input type="email" name="mail" required></p>-->
                     <p style="color: black;">Contraseña: <input type="password" name="contra" required> </p>
                  
                     
