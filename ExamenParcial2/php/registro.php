@@ -22,9 +22,13 @@ require '../index.php';
         fwrite($file, $usuario." ".$contra."\r\n");
     }
     fclose($file);
-    $url = "http://localhost/cursoPHP/examen/examenParcial2/ExamenParcial2/";
+    $domain = $_SERVER['HTTP_HOST'];
+    $scheme = $_SERVER['REQUEST_SCHEME'];
+    $uri = $_SERVER['REQUEST_URI'];
+    $uri = substr($uri,0,-14);// Elimina los últimos 14 caracteres
+    $url =  $scheme . "://" . $domain. $uri;
     echo '<script>window.location="'.$url.'"</script>';
-    echo "<br><a href='formulario.php'>regresar</a>";
+    //echo "<br><a href='formulario.php'>regresar</a>";
     exit();
     
 ?>
