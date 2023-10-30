@@ -43,7 +43,8 @@
         </div>
     </section>
 
-<h1>Cuestionario de Programación</h1>
+
+<h1 class="tit-exam">Examen de conocimientos</h1>
   <form class="exam">
     <ol>
       <li>
