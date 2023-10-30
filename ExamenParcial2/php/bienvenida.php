@@ -68,5 +68,64 @@
    // $url = "http://localhost/cursoPHP/examen/examenParcial2/ExamenParcial2/";
    // echo '<script>window.location="'.$url.'"</script>';  
     ?>
+
+
+<section id="footer">
+    <div class="footer-left">
+        <h2>Vamos Hagamos cosas increibles juntos!</h2>
+
+        <div class="email-form">
+            <h2>Empezar <span>diciendo hola</span></h2>
+            <input type="text" name="name" id="" placeholder="Tu nombre">
+            <input type="email" name="email" id="" placeholder="Ingresa tu Email">
+            <div>
+                <input type="Numero" name="Numero de telefono" id="" placeholder="Numero de telefono">
+                <button type="submit">Enviar</button>
+            </div>
+        </div>
+
+        <div class="footer-title">
+            <h3 class="title-first-name">
+                Code
+            </h3>
+            <h3 class="title-last-name">
+                Crafters
+            </h3>
+        </div>
+    </div>
+    <div class="footer-right">
+        <div class="footer-email-intro">
+            <h3>Informacion:</h3>
+            <h6>Email:</h6>
+            <h4>codecrafters@gmail.com</h4>
+        </div>
+        <div class="footer-nav-menu">
+            <ul class="footer-menu">
+                <li><a class="active" href="#">&lt; Servicio &gt;</a></li>
+                <li><a class="" href="#">Trabajos</a></li>
+                <li><a class="" href="#">Notas</a></li>
+                <li><a class="" href="#">Contactos</a></li>
+            </ul>
+        </div>
+        <div class="social-icons">
+            <a href="" target="_blank">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="" target="_blank">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="" target="_blank">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
 </body>
 </html>
