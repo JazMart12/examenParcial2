@@ -42,6 +42,10 @@
         </div>
     </section>
 
+
+
+<h1 class="tit-exam">Examen de conocimientos</h1>
+
     <?php
         session_start();
         $usuario = $_SESSION["usuario"];    
@@ -75,6 +79,7 @@
         }
     ?>
 <h1>Cuestionario de Programación</h1>
+
   <form class="exam">
     <ol>
       <li>
