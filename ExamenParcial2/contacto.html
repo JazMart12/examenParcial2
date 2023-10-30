@@ -25,14 +25,22 @@
                 Crafters
             </h3>
         </div>
-        <div>
-            <ul class="navbar-menu">
+        <div class="menu-icon" id="menu-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="navbar-menu" id="navbar-menu">
+            <ul>
                 <li><a class="" href="index.php">Inicio</a></li>
                 <li><a class="" href="servicios.html">Servicios</a></li>
                 <li><a class="active" href="contacto.html">&lt; Contacto &gt;</a></li>
                 <li><a class="" href="php/contrataciones.php">Contrataciones</a></li>
             </ul>
         </div>
+        <script>
+            document.getElementById("menu-icon").addEventListener("click", function () {
+                document.getElementById("navbar-menu").classList.toggle("active");
+            });
+        </script>
         <div>
             <ul class="social-media">
                 <li>

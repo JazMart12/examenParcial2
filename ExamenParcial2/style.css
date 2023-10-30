@@ -1292,10 +1292,148 @@ strong {
   transition: 0.3s ease-in-out;
   transform: scale(1.6) rotate(-0deg);
 }
+<<<<<<< HEAD
 .conten1{
   background-image: url('../imagenes/fondo_bien.jpg'); /* Reemplaza 'ruta_de_la_imagen.jpg' con la URL de tu imagen de fondo */
       background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
       background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
       background-attachment: fixed;
       width: 100%;
+=======
+
+/*-------------------------------*/
+/*Estilos puntos de quiebre*/
+/*-------------------------------*/
+
+/* Estilos base para pantallas grandes */
+/* Por ejemplo, para pantallas más grandes que 1200px de ancho */
+/* Este es el estilo predeterminado y no necesita media query */
+.navbar-menu li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+/* Estilos para pantallas medianas (entre 992px y 1200px) */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .navbar-menu {
+      text-align: center;
+  }
+
+  .navbar-menu li {
+      display: block;
+      margin: 10px 0;
+  }
+}
+
+/* Estilos para pantallas pequeñas (menos de 992px) */
+@media (max-width: 991px) {
+  .navbar-menu {
+      text-align: center;
+  }
+
+  .navbar-menu li {
+      display: block;
+      margin: 10px 0;
+  }
+}
+
+body {
+  background-color: #222;
+}
+
+/* Encabezado */
+#header {
+  text-align: center;
+  padding: 20px;
+}
+
+.navbar-title h3 {
+  font-weight: 900;
+  font-size: 40px;
+}
+
+.navbar-menu {
+  list-style: none;
+}
+
+/* Estilos para pantallas medianas (entre 992px y 1200px) */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .navbar-title h3 {
+      font-size: 30px;
+  }
+}
+
+/* Estilos para pantallas pequeñas (menos de 992px) */
+@media (max-width: 991px) {
+  .navbar-title h3 {
+      font-size: 25px;
+  }
+
+  .navbar-menu {
+      text-align: center;
+  }
+
+  .navbar-menu li {
+      display: inline-block;
+      margin: 0 10px;
+  }
+}
+
+/* Estilos para el formulario de contacto */
+@media (max-width: 768px) {
+  .contact-form {
+      background-color: #64f4ac;
+      color: black;
+      border-radius: 30px;
+      padding: 30px;
+  }
+}
+
+/* Estilos para el mapa de Google */
+@media (max-width: 768px) {
+  iframe {
+      width: 100%;
+      height: 300px;
+  }
+}
+
+/* Estilos para el pie de página */
+#footer {
+  text-align: center;
+  padding: 20px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+}
+
+/* Estilos para pantallas pequeñas (menos de 768px) */
+@media (max-width: 767px) {
+  /* Oculta el menú en pantalla pequeña por defecto */
+  #navbar-menu {
+      display: none;
+  }
+
+  /* Estilos para el icono de hamburguesa */
+  #menu-icon {
+      display: block;
+      text-align: right;
+      cursor: pointer;
+  }
+
+  /* Estilos para el menú desplegable */
+  #navbar-menu.active {
+      display: block;
+  }
+
+  /* Estilos para las opciones del menú en el menú desplegable */
+  #navbar-menu.active ul {
+      list-style: none;
+  }
+
+  #navbar-menu.active li {
+      display: block;
+      margin: 10px 0;
+  }
+>>>>>>> ea568d86400742e66c8cc8cb3e8dbbbfcad658ec
 }
