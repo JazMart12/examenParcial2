@@ -202,6 +202,8 @@
                 <br>
                 <p>¡LLena este formulario para poder hacer el examen de selección!.</p>
                 <br>
+                <p class="h3" style="color: white;">¿Ya  tienes tu clave de acceso? !Inicia el examen de selecion¡</p>
+                <a href="examen.php" style="color: red;">!Inicia tu examen¡</a>    
                 <p>Dudas y aclaraciones</p>
                 
                 <ul>

@@ -63,7 +63,7 @@ require '../index.php';
         echo '<script> window.alert("Usuario y/o contraseña incorrecto");</script>';
         //sleep(3);
 
-        $url = "http://localhost/cursophp/examenParcial2/ExamenParcial2/index.php";
+        //$url = "http://localhost/cursophp/examenParcial2/ExamenParcial2/index.php";
 
         $domain = $_SERVER['HTTP_HOST'];
         $scheme = $_SERVER['REQUEST_SCHEME'];
