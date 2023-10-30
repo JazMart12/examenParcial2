@@ -78,7 +78,7 @@
             exit();
         }
     ?>
-<h1>Cuestionario de Programación</h1>
+<h1>Examen de conocimientos</h1>
 
   <form class="exam">
     <ol>
