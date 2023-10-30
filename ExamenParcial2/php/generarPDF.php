@@ -101,12 +101,25 @@ function generarClaveAleatoria($longitud) {
 }
 
 $claveAleatoria = generarClaveAleatoria(8);
+$ban = 1;
+$usuario = $_SESSION["usuario"];
+
+$file = fopen("claves.txt","a+");
+$fileContent = file_get_contents("claves.txt");
+
+ if (strpos($fileContent, $usuario) !== false)//ya existe un usuario con clave
+        $ban = 0;
+
+if($ban==0){
+    $claveAleatoria = "Este usuario ya tiene una clave";
+}
+    
+    fwrite($file, $usuario." ".$claveAleatoria."\r\n");
+    fclose($file);
+
 $pdf->Cell(60,55,"Tu clave: $claveAleatoria",0,1);
 
-$usuario = $_SESSION["usuario"];
-$file = fopen("claves.txt","a+");
-fwrite($file, $usuario." ".$claveAleatoria."\r\n");
-fclose($file);
+
 
 $pdf->Image("image/firma.jpg",20,230,33);
 $pdf->SetFont('Arial','I',10);
@@ -114,5 +127,4 @@ $pdf->Cell(60,55,"Firma del director ejecutivo",0);
 $pdf->Cell(40,15,"Director Carlos C.  Martinez",0);
 $pdf->Image($imagen,20,250,33);
 $pdf->Output();
-?>
 ?>
