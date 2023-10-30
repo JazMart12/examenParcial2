@@ -1,167 +1,104 @@
-<?php
-session_start();
-
-// Verificar si el usuario está logueado
-if (!isset($_SESSION['user_id'])) {
-    header('Location: login.php'); // Redirigir a la página de inicio de sesión
-    exit();
-}
-
-// Verificar si el usuario ya completó el examen
-if (isset($_SESSION['exam_completed']) && $_SESSION['exam_completed']) {
-    echo "Ya has completado el examen.";
-    exit();
-}
-
-// Configuración del examen (debes cargar las preguntas desde una base de datos)
-$examen = [
-    "titulo" => "Examen de Prueba",
-    "fecha" => "29 de Octubre de 2023",
-    "instrucciones" => "Responde a las siguientes 10 preguntas.",
-    "puntaje_aprobatorio" => 70,
-];
-
-// Preguntas y respuestas simuladas (debes cargarlas desde una base de datos)
-$preguntas = [
-    [
-        "texto" => "¿Cuál es la capital de Francia?",
-        "respuestas" => [
-            ["texto" => "París", "correcta" => true],
-            ["texto" => "Londres", "correcta" => false],
-            ["texto" => "Madrid", "correcta" => false],
-            ["texto" => "Berlín", "correcta" => false],
-        ],
-    ],
-    [
-        "texto" => "¿Cuál es el río más largo del mundo?",
-        "respuestas" => [
-            ["texto" => "Nilo", "correcta" => true],
-            ["texto" => "Amazonas", "correcta" => false],
-            ["texto" => "Misisipi", "correcta" => false],
-            ["texto" => "Yangtsé", "correcta" => false],
-        ],
-    ],
-    [
-        "texto" => "¿Cuál es el planeta más grande del sistema solar?",
-        "respuestas" => [
-            ["texto" => "París", "correcta" => true],
-            ["texto" => "Júpiter", "correcta" => false],
-            ["texto" => "Madrid", "correcta" => false],
-            ["texto" => "Berlín", "correcta" => false],
-        ],
-    ],
-    [
-        "texto" => "¿Cuál es la capital de Francia?",
-        "respuestas" => [
-            ["texto" => "París", "correcta" => true],
-            ["texto" => "Londres", "correcta" => false],
-            ["texto" => "Madrid", "correcta" => false],
-            ["texto" => "Berlín", "correcta" => false],
-        ],
-    ],
-    [
-        "texto" => "¿Cuál es la capital de Francia?",
-        "respuestas" => [
-            ["texto" => "París", "correcta" => true],
-            ["texto" => "Londres", "correcta" => false],
-            ["texto" => "Madrid", "correcta" => false],
-            ["texto" => "Berlín", "correcta" => false],
-        ],
-    ],
-    [
-        "texto" => "¿Cuál es la capital de Francia?",
-        "respuestas" => [
-            ["texto" => "París", "correcta" => true],
-            ["texto" => "Londres", "correcta" => false],
-            ["texto" => "Madrid", "correcta" => false],
-            ["texto" => "Berlín", "correcta" => false],
-        ],
-    ],
-    [
-        "texto" => "¿Cuál es la capital de Francia?",
-        "respuestas" => [
-            ["texto" => "París", "correcta" => true],
-            ["texto" => "Londres", "correcta" => false],
-            ["texto" => "Madrid", "correcta" => false],
-            ["texto" => "Berlín", "correcta" => false],
-        ],
-    ],
-    [
-        "texto" => "¿Cuál es la capital de Francia?",
-        "respuestas" => [
-            ["texto" => "París", "correcta" => true],
-            ["texto" => "Londres", "correcta" => false],
-            ["texto" => "Madrid", "correcta" => false],
-            ["texto" => "Berlín", "correcta" => false],
-        ],
-    ],
-    [
-        "texto" => "¿Cuál es la capital de Francia?",
-        "respuestas" => [
-            ["texto" => "París", "correcta" => true],
-            ["texto" => "Londres", "correcta" => false],
-            ["texto" => "Madrid", "correcta" => false],
-            ["texto" => "Berlín", "correcta" => false],
-        ],
-    ],
-    // Agrega más preguntas aquí...
-];
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Procesar respuestas del examen
-    $respuestas = $_POST;
-
-    $puntaje = calcularPuntaje($respuestas, $preguntas);
-
-    if ($puntaje >= $examen['puntaje_aprobatorio']) {
-        echo "¡Felicidades! Has aprobado el examen con un puntaje de $puntaje.";
-    } else {
-        echo "Lo siento, no has aprobado el examen. Tu puntaje es $puntaje.";
-    }
-
-    // Marcar el examen como completado para este usuario
-    $_SESSION['exam_completed'] = true;
-
-    // Puedes almacenar el resultado en una base de datos aquí
-}
-
-// Función para calcular el puntaje del examen
-function calcularPuntaje($respuestas, $preguntas) {
-    $puntaje = 0;
-
-    foreach ($preguntas as $indice => $pregunta) {
-        $respuesta_usuario = $respuestas["q$indice"];
-        if (isset($respuesta_usuario) && $respuesta_usuario === 'correcta') {
-            $puntaje += 10; // Otorga 10 puntos por respuesta correcta
-        }
-    }
-
-    return $puntaje;
-}
-?>
-
+<?php session_start();?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title><?= $examen['titulo'] ?></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido/a</title>
+    <script src="https://kit.fontawesome.com/e674bba739.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/x-icon" href="../../imagenes/logo-ConvertImage.ico">
 </head>
-<body>
-    <h1><?= $examen['titulo'] ?></h1>
-    <p>Fecha: <?= $examen['fecha'] ?></p>
-    <p><?= $examen['instrucciones'] ?></p>
 
-    <form method="POST">
-        <?php
-        foreach ($preguntas as $indice => $pregunta) {
-            shuffle($pregunta['respuestas']); // Mezcla las respuestas para que no estén siempre en el mismo orden
-            echo "<p>Pregunta " . ($indice + 1) . ": {$pregunta['texto']}</p>";
-            foreach ($pregunta['respuestas'] as $respuesta) {
-                $valor = $respuesta['correcta'] ? 'correcta' : 'incorrecta';
-                echo "<input type='radio' name='q$indice' value='$valor'> {$respuesta['texto']}<br>";
-            }
-        }
-        ?>
-        <input type="submit" value="Enviar">
-    </form>
-</body>
-</html>
+<body style="background-color: #222;">
+    <!-- Encabezado -->
+    <section id="header">
+        <div class="navbar-title">
+            <h3 class="title-first-name" style="font-weight: 900; font-size: 40px;">
+                Code
+            </h3>
+            <h3 class="title-last-name" style="font-weight: 900; font-size: 40px;">
+                Crafters
+            </h3>
+        </div>
+        <div>
+            <ul class="navbar-menu">
+                <li><a class="" href="../index.php">Inicio</a></li>
+                <li><a class="active" href="../Servicios.html">&lt; Servicios &gt;</a></li>
+                <li><a class="" href="../contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul class="social-media">
+                <li>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <a href="#" target="_blank">LinkedIn</a>
+                </li>
+                <li>
+                    <i class="fa-brands fa-github"></i>
+                    <a href="#" target="_blank">Github</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+<!--Aqui va todo la magia-->
+
+
+    <section id="footer">
+    <div class="footer-left">
+        <h2>Vamos Hagamos cosas increibles juntos!</h2>
+
+        <div class="email-form">
+            <h2>Empezar <span>diciendo hola</span></h2>
+            <input type="text" name="name" id="" placeholder="Tu nombre">
+            <input type="email" name="email" id="" placeholder="Ingresa tu Email">
+            <div>
+                <input type="Numero" name="Numero de telefono" id="" placeholder="Numero de telefono">
+                <button type="submit">Enviar</button>
+            </div>
+        </div>
+
+        <div class="footer-title">
+            <h3 class="title-first-name">
+                Code
+            </h3>
+            <h3 class="title-last-name">
+                Crafters
+            </h3>
+        </div>
+    </div>
+    <div class="footer-right">
+        <div class="footer-email-intro">
+            <h3>Informacion:</h3>
+            <h6>Email:</h6>
+            <h4>codecrafters@gmail.com</h4>
+        </div>
+        <div class="footer-nav-menu">
+            <ul class="footer-menu">
+                <li><a class="active" href="#">&lt; Servicio &gt;</a></li>
+                <li><a class="" href="#">Trabajos</a></li>
+                <li><a class="" href="#">Notas</a></li>
+                <li><a class="" href="#">Contactos</a></li>
+            </ul>
+        </div>
+        <div class="social-icons">
+            <a href="" target="_blank">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="" target="_blank">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="" target="_blank">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+        </div>
+    </div>
+</section>

@@ -1292,14 +1292,15 @@ strong {
   transition: 0.3s ease-in-out;
   transform: scale(1.6) rotate(-0deg);
 }
-<<<<<<< HEAD
+
 .conten1{
   background-image: url('../imagenes/fondo_bien.jpg'); /* Reemplaza 'ruta_de_la_imagen.jpg' con la URL de tu imagen de fondo */
       background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
       background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
       background-attachment: fixed;
       width: 100%;
-=======
+      padding-bottom: 30px;
+}
 
 /*-------------------------------*/
 /*Estilos puntos de quiebre*/
@@ -1435,5 +1436,4 @@ body {
       display: block;
       margin: 10px 0;
   }
->>>>>>> ea568d86400742e66c8cc8cb3e8dbbbfcad658ec
 }
