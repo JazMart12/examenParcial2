@@ -71,7 +71,7 @@ if (isset($_SESSION["usuario"])) {
                                 </div>
                                  
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-primary btn-block">Login</button>
+                                    <button type="submit" class="bt n btn-primary btn-block">Login</button>
                                 </div>
                                 <div class="form-group text-center">
                                     
