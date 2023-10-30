@@ -1,3 +1,15 @@
+<?php
+// Iniciar o reanudar una sesión
+session_start();
+
+// Verificar si hay una sesión activa
+if (isset($_SESSION["usuario"])) {
+    $sesionActiva = false;
+} else {
+    $sesionActiva = true;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,9 +41,13 @@
         <div>
             <ul class="navbar-menu">
                 <li><a class="" href="index.php">Inicio</a></li>
-                <li><a class="active" href="Servicios.html">&lt; Servicios &gt;</a></li>
-                <li><a class="" href="contacto.html">Contacto</a></li>
-                <li><a class="" href="php/contrataciones.php">Contrataciones</a></li>
+                <li><a class="active" href="Servicios.php">&lt; Servicios &gt;</a></li>
+                <li><a class="" href="contacto.php">Contacto</a></li>
+                <?php
+                    if(!$sesionActiva){
+                        echo '<li><a href="php/contrataciones.php">Contrataciones</a></li>';
+                    }
+                ?>
             </ul>
         </div>
         <div>

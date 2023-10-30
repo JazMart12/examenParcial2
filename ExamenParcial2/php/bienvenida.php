@@ -25,8 +25,8 @@
         <div>
             <ul class="navbar-menu">
                 <li><a class="" href="../index.php">Inicio</a></li>
-                <li><a class="active" href="../Servicios.html">&lt; Servicios &gt;</a></li>
-                <li><a class="" href="../contacto.html">Contacto</a></li>
+                <li><a class="active" href="../Servicios.php">&lt; Servicios &gt;</a></li>
+                <li><a class="" href="../contacto.php">Contacto</a></li>
             </ul>
         </div>
         <div>
