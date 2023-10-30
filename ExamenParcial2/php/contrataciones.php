@@ -157,40 +157,40 @@
                     <br>
                     <label class="h6">Lenguajes y/o frameworks que manejas:</label><br>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="java" id="java">
+                        <input class="form-check-input" type="checkbox" value="java" id="java" name="lenguajes[]">
                         <label class="form-check-label" for="Java">Java</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="c" id="c">
+                        <input class="form-check-input" type="checkbox" value="c" id="c" name="lenguajes[]">
                         <label class="form-check-label" for="c">C</label>
                     </div>    
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="cmas" id="cmas">
+                        <input class="form-check-input" type="checkbox" value="cmas" id="cmas" name="lenguajes[]">
                         <label class="form-check-label" for="cmas">C++</label>
                     </div>    
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="phyton" id="phyton">
+                        <input class="form-check-input" type="checkbox" value="phyton" id="phyton" name="lenguajes[]">
                         <label class="form-check-label" for="phyton">Phyton</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="javascript" id="javascript">
+                        <input class="form-check-input" type="checkbox" value="javascript" id="javascript" name="lenguajes[]">
                         <label class="form-check-label" for="javascript">Javascript</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="react" id="react">
+                        <input class="form-check-input" type="checkbox" value="react" id="react" name="lenguajes[]">
                         <label class="form-check-label" for="react">React</label>
                     </div>    
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="html" id="html">
+                        <input class="form-check-input" type="checkbox" value="html" id="html" name="lenguajes[]">
                         <label class="form-check-label" for="html">HTML</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="bootstrap" id="bootstrap">
+                        <input class="form-check-input" type="checkbox" value="bootstrap" id="bootstrap" name="lenguajes[]">
                         <label class="form-check-label" for="bootstrap">Bootstrap</label>
                     </div>                           
                     <div class="form-group">
                         <label for="file">Subir tu foto</label>    
-                        <input type="file" name="file" id="file" class="form-control-file"   >
+                        <input type="file" name="file" id="file" class="form-control-file">
                     </div><br>
                     <button type="submit" class="btn btn-dark">Enviar</button>
                 </form>
