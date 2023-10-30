@@ -9,7 +9,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="../style.css">
     <link rel="icon" type="image/x-icon" href="../../imagenes/logo-ConvertImage.ico">
-    <meta http-equiv="refresh" content="4; URL=http://localhost/cursoPHP/examen/examenParcial2/ExamenParcial2" />
 </head>
 <body style="background-color: #222;">
     <!-- Encabezado -->
@@ -62,7 +61,16 @@
         ?>
     <h3 class="h3" style="color: white; font-family: Arial, Helvetica, sans-serif;"><?php echo $saludo?></h3>
     <h2 class="h2">Bienvenido <?php echo $_SESSION['usuario']?></h2>
+    
     <?php 
+    $domain = $_SERVER['HTTP_HOST'];
+    $scheme = $_SERVER['REQUEST_SCHEME'];
+    $uri = $_SERVER['REQUEST_URI'];
+    $uri = substr($uri, 0, -18); // Elimina los últimos 14 caracteres
+    
+    $newURL = $scheme . "://" . $domain . $uri;
+    
+    header("Refresh: 5; URL=" . $newURL);
    // sleep(3);
    // $url = "http://localhost/cursoPHP/examen/examenParcial2/ExamenParcial2/";
    // echo '<script>window.location="'.$url.'"</script>';  
