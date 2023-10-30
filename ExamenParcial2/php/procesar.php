@@ -31,10 +31,19 @@
     }
     
     if(isset($_FILES["file"]) && !(empty($_FILES["file"]["tmp_name"]))){
-        $targetDir = "uploads/";  // Directorio donde se guardarán las imágenes
+        $targetDir = "imagenes/";  // Directorio donde se guardarán las imágenes
         $targetFile = $targetDir . basename($_FILES["file"]["name"]);
 
-        move_uploaded_file($_FILES["file"]["tmp_name"], $targetFile);
+        // Verificar si el archivo es una imagen real
+        $check = getimagesize($_FILES["file"]["tmp_name"]);
+        if ($check !== false) {
+            if (move_uploaded_file($_FILES["file"]["tmp_name"], $targetFile)) { ?>
+                        <script> window.alert(   <?php echo htmlspecialchars(basename($_FILES["file"]["name"]));?> "se a subido correctamente"   );</script>;                
+            <?php
+            } else {
+                echo '<script> window.alert("Error al subit);</script>';
+            }
+        } 
     }
 
     class PDF extends FPDF
@@ -49,7 +58,7 @@ function Header()
     // Movernos a la derecha
     $this->Cell(80);
     // Título
-    $this->Cell(30,10,'Code Crafters',1,0,'C');
+    $this->Cell(30,10,'Code Crafters','C');
     // Salto de línea
     $this->Ln(20);
 }
@@ -65,11 +74,57 @@ function Footer()
     $this->Cell(0,10,'Page '.$this->PageNo().'/{nb}',0,0,'C');
 }
 }
+date_default_timezone_set('America/Mexico_City');
 
+// Obtiene la fecha actual en la zona horaria de México
+$fechaActual = date("Y-m-d H:i:s"); // Formato: Año-Mes-Día Hora:Minuto:Segundo
 // Creación del objeto de la clase heredada
 $pdf = new PDF();
-$pdf->AliasNbPages();
+//$pdf->AliasNbPages();
 $pdf->AddPage();
-$pdf->SetFont('Times','',12);
+$pdf->SetFont('Arial','B',14);
+$pdf->Cell(90,25,"Fecha: $fechaActual",0,1);
+$pdf->Cell(40,5,'Datos del Usuario:',0,1);
+$pdf->SetFont('Arial','',12);
+
+$pdf->Cell(40,10,"Nombre: $nombre",0,1);
+$pdf->Cell(40,10,"Apellido Paterno: $apellido1",0,1);
+$pdf->Cell(40,10,"Apellido Materno: $apellido2",0,1);
+$pdf->Cell(40,10,"Fecha de nacimiento:",0,1);
+$pdf->Cell(40,10,"Dia: $dia     Mes: $mes   Anio: $anio",0,1);
+
+$pdf->Cell(40,10,"Correo electronico: $correo",0,1);
+$pdf->Cell(40,10,"Telefono: $telefono",0,1);
+
+$pdf->SetFont('Arial','B',12);
+$pdf->Cell(40,10,"Habla ingles:",0,1);
+
+$pdf->SetFont('Arial','',12);
+$pdf->Cell(40,10,"$ingles",0,1);
+
+$pdf->SetFont('Arial','B',12);
+$pdf->Cell(40,10,"Disponible para viajar:",0,1);
+
+$pdf->SetFont('Arial','',12);
+$pdf->Cell(40,10,"$viajar",0,1);
+
+$pdf->SetFont('Arial','B',12);
+$pdf->Cell(40,10,"Puesto al que aplica:",0,1);
+
+$pdf->SetFont('Arial','',12);
+$pdf->Cell(40,10,"$puesto",0,1);
+
+$pdf->SetFont('Arial','B',12);
+$pdf->Cell(40,10,"Lenguajes y/o frameworks que maneja:",0,1);
+
+$pdf->SetFont('Arial','',12);
+for($i=0;$i<sizeof($lenguajesSeleccionados);$i++){
+    $pdf->Cell(40,10,"$lenguajesSeleccionados[$i]",0,1);
+}
+
+$pdf->Image("imagenes/firma.jpg",20,230,33);
+$pdf->SetFont('Arial','I',10);
+$pdf->Cell(60,55,"Firma del director ejecutivo",0);
+$pdf->Cell(40,15,"Director Carlos C.  Martinez",0);
 $pdf->Output();
 ?>
