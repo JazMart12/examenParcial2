@@ -40,8 +40,15 @@ if (isset($_SESSION["usuario"])) {
                 <li><a class="active" href="index.php">&lt;Inicio&gt;</a></li>
                 <li><a class="" href="servicios.html">Servicios</a></li>
                 <li><a class="" href="contacto.html">Contacto</a></li>
-                <li><a href="php/contrataciones.php">Contrataciones</a></li>
+                <?php
+                    if(!$sesionActiva){
+                        echo '<li><a href="php/contrataciones.php">Contrataciones</a></li>';
+                    }
+                ?>
+                
+                
             </ul>
+            
         </div>
         <div>
             <ul class="social-media">
