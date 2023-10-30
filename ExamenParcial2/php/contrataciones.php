@@ -165,7 +165,7 @@
                         <label class="form-check-label" for="c">C</label>
                     </div>    
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="cmas" id="cmas" name="lenguajes[]">
+                        <input class="form-check-input" type="checkbox" value="c++" id="cmas" name="lenguajes[]">
                         <label class="form-check-label" for="cmas">C++</label>
                     </div>    
                     <div class="form-check">
