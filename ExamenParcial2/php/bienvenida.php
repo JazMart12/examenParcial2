@@ -42,6 +42,8 @@
             </ul>
         </div>
     </section>
+
+
         <?php
         if (empty($_SESSION["usuario"])) {
             # Lo redireccionamos al formulario de inicio de sesión
@@ -60,9 +62,21 @@
             }
            
         ?>
-    <h3 class="h3" style="color: white; font-family: Arial, Helvetica, sans-serif;"><?php echo $saludo?></h3>
-    <h2 class="h2">Bienvenido <?php echo $_SESSION['usuario']?></h2>
-    
+
+    <!-- Aqui inicia lo del bienvenido -->
+    <section class="conten1">
+    <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 text-center">
+      <h1 class="mt-5"><?php echo $saludo?></h1>
+        <h1 class="mt-5">¡Bienvenido a Nuestra Página <?php echo $_SESSION['usuario']?>!</h1>
+        <p class="lead">Gracias por visitarnos. Esperamos que encuentres lo que buscas.</p>
+        <a href="contrataciones.php" class="btn btn-primary">Vamos</a>
+      </div>
+    </div>
+  </div>
+  </section>
+ 
     <?php 
     $domain = $_SERVER['HTTP_HOST'];
     $scheme = $_SERVER['REQUEST_SCHEME'];
@@ -134,6 +148,8 @@
         </div>
     </div>
 </section>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 
 </body>
 </html>
