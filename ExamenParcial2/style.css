@@ -1294,7 +1294,7 @@ strong {
 }
 
 .conten1{
-  background-image: url('../imagenes/fondo_bien.jpg'); /* Reemplaza 'ruta_de_la_imagen.jpg' con la URL de tu imagen de fondo */
+  background-image: url('imagenes/fondo_bien.jpg'); /* Reemplaza 'ruta_de_la_imagen.jpg' con la URL de tu imagen de fondo */
       background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
       background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
       background-attachment: fixed;

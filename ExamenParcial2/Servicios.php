@@ -21,7 +21,7 @@ if (isset($_SESSION["usuario"])) {
     <script src="https://kit.fontawesome.com/e674bba739.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="icon" type="image/x-icon" href="../imagenes/logo-ConvertImage.ico">
+    <link rel="icon" type="image/x-icon" href="imagenes/logo-ConvertImage.ico">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
     <link href="../assets/dist/css/bootstrap.min.css" rel="styles.css">
@@ -147,63 +147,63 @@ if (isset($_SESSION["usuario"])) {
   <div class="box-img">
       <a href="#">
           <figure>
-              <img src="../imagenes/collage1.jpg" alt="img-galeria">
+              <img src="imagenes/collage1.jpg" alt="img-galeria">
           </figure>
       </a>
   </div>
   <div class="box-img">
       <a href="#">
           <figure>
-              <img src="../imagenes/collage2.jpeg" alt="img-galeria">
+              <img src="imagenes/collage2.jpeg" alt="img-galeria">
           </figure>
       </a>
   </div>
   <div class="box-img">
       <a href="#">
           <figure>
-              <img src="../imagenes/collage3.jpeg" alt="img-galeria">
+              <img src="imagenes/collage3.jpeg" alt="img-galeria">
           </figure>
       </a>
   </div>
   <div class="box-img">
       <a href="#">
           <figure>
-              <img src="../imagenes/collage7.jpeg" alt="img-galeria">
+              <img src="imagenes/collage7.jpeg" alt="img-galeria">
           </figure>
       </a>
   </div>
   <div class="box-img">
       <a href="#">
           <figure>
-              <img src="../imagenes/collage5.jpeg" alt="img-galeria">
+              <img src="imagenes/collage5.jpeg" alt="img-galeria">
           </figure>
       </a>
   </div>
   <div class="box-img">
       <a href="#">
           <figure>
-              <img src="../imagenes/collage6.jpeg" alt="img-galeria">
+              <img src="imagenes/collage6.jpeg" alt="img-galeria">
           </figure>
       </a>
   </div>
   <div class="box-img">
       <a href="#">
           <figure>
-              <img src="../imagenes/collage8.jpeg" alt="img-galeria">
+              <img src="imagenes/collage8.jpeg" alt="img-galeria">
           </figure>
       </a>
   </div>
   <div class="box-img">
     <a href="#">
         <figure>
-            <img src="../imagenes/collage4.png" alt="img-galeria">
+            <img src="imagenes/collage4.png" alt="img-galeria">
         </figure>
     </a>
 </div>
 <div class="box-img">
   <a href="#">
       <figure>
-          <img src="../imagenes/collage9.jpeg" alt="img-galeria">
+          <img src="imagenes/collage9.jpeg" alt="img-galeria">
       </figure>
   </a>
 </div>
@@ -361,19 +361,19 @@ $(document).ready(function() {
 
         <div class="row">
           <div class="col-lg-4">
-            <img src="../imagenes/po1.jpeg" alt="Descripción de la imagen 1" class="im-car">
+            <img src="imagenes/po1.jpeg" alt="Descripción de la imagen 1" class="im-car">
             <h2 class="fw-normal">Consultoría en TI 2022</h2>
             <p> Los consultores en TI desempeñaron un papel fundamental en la planificación, implementación y optimización de soluciones tecnológicas.</p>
             <p><a class="btn btn-secondary" href="#">Ver detalles &raquo;</a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
-            <img src="../imagenes/po4.jpeg" alt="Descripción de la imagen 2"  class="im-car">
+            <img src="imagenes/po4.jpeg" alt="Descripción de la imagen 2"  class="im-car">
             <h2 class="fw-normal">Staffing TI 2023</h2>
             <p>Las agencias de staffing en TI desempeñan un papel fundamental en la identificación de candidatos calificados y en la creación de equipos tecnológicos sólidos.</p>
             <p><a class="btn btn-secondary" href="#">Ver detalles &raquo;</a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
-            <img src="../imagenes/po3.jpeg" alt="Descripción de la imagen 3" class="im-car">
+            <img src="imagenes/po3.jpeg" alt="Descripción de la imagen 3" class="im-car">
             <h2 class="fw-normal">Consultoría en Desarrollo 2023</h2>
             <p>La consultoría en desarrollo en 2023 abarca una amplia gama de servicios destinados a mejorar la eficiencia, la competitividad y la sostenibilidad de las empresas.</p>
             <p><a class="btn btn-secondary" href="#">Ver detalles &raquo;</a></p>
@@ -390,7 +390,7 @@ $(document).ready(function() {
             <p class="lead">Negocios, construcción,eduacación, ingeniería y arquitectura, inmobiliario, consumo y finanzas.</p>
           </div>
           <div class="col-md-5">
-            <img src="../imagenes/rr1.png" alt="Descripción de la imagen 1" class="img-fluid" style="max-width: 100%;">
+            <img src="imagenes/rr1.png" alt="Descripción de la imagen 1" class="img-fluid" style="max-width: 100%;">
           </div>
         </div>
         
@@ -402,7 +402,7 @@ $(document).ready(function() {
             <p class="lead">En Code Crafters desarrollamos software a la medida. Abarcamos todo el procesos desde la fase de consultoría previa, diseño y arquitectura, desarrollo, pruebas, control de calidad y puesta en marcha.</p>
           </div>
           <div class="col-md-5 order-md-1">
-             <img src="../imagenes/rr2.png" alt="Descripción de la imagen 1" class="img-fluid" style="max-width: 100%;">
+             <img src="imagenes/rr2.png" alt="Descripción de la imagen 1" class="img-fluid" style="max-width: 100%;">
           </div>
         </div>
         
@@ -414,7 +414,7 @@ $(document).ready(function() {
             <p class="lead">Trabajamos en plataformas como:HTML5, CSS3, Node, C#, Java, Angular, React, TypeScript, Phyton, PHP y .NET.</p>
           </div>
           <div class="col-md-5">
-            <img src="../imagenes/rr5.png" alt="Descripción de la imagen 1" class="img-fluid" style="max-width: 100%;">
+            <img src="imagenes/rr5.png" alt="Descripción de la imagen 1" class="img-fluid" style="max-width: 100%;">
           </div>
         </div>
         

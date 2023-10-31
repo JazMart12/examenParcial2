@@ -23,7 +23,7 @@ if (isset($_SESSION["usuario"])) {
     <script src="https://kit.fontawesome.com/e674bba739.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="../imagenes/logo-ConvertImage.ico">
+    <link rel="icon" type="image/x-icon" href="imagenes/logo-ConvertImage.ico">
     <link href="../assets/dist/css/bootstrap.min.css" rel="styles.css">
 
 </head>
@@ -166,22 +166,22 @@ if (isset($_SESSION["usuario"])) {
             <div class="hoodie-guy-animation-class">
                 <div class="hoodie-guy"></div>
                 <div class="circle">
-                    <img src="../iconos/" alt="">
-                    <span style="--i:1;"><img src="../iconos/mouse-svgrepo-com.svg" height="70px"></span>
-                    <span style="--i:2;"><img src="../iconos/software-developer-work-on-computer-programmer-coder-svgrepo-com.svg" height="75px"></span>
-                    <span style="--i:3;"><img src="../iconos/screencast-svgrepo-com.svg" height="75px"></span>
-                    <span style="--i:4;"><img src="../iconos/software-svgrepo-com.svg" height="75px"></span>
-                    <span style="--i:5;"><img src="../iconos/translation-svgrepo-com.svg" height="75px"></span>
-                    <span style="--i:6;"><img src="../iconos/code-merge-svgrepo-com.svg" height="75px"></span>
-                    <span style="--i:7;"><img src="../iconos/code-file-svgrepo-com.svg" height="75px"></span>
-                    <span style="--i:8;"><img src="../iconos/software-platform-computer-software-system-svgrepo-com.svg" height="75px"></span>
-                    <span style="--i:9;"><img src="../iconos/copy-svgrepo-com.svg" height="75px"></span>
-                    <span style="--i:10;"><img src="../iconos/code-svgrepo-com.svg" height="75px"></span>
-                    <span style="--i:11;"><img src="../iconos/file-smile-svgrepo-com.svg" height="75px"></span>
-                    <span style="--i:12;"><img src="../iconos/annotation-user-svgrepo-com.svg" height="70px"></span>
-                    <span style="--i:13;"><img src="../iconos/folder-cloud-svgrepo-com.svg" height="75px"></span>
-                    <span style="--i:14;"><img src="../iconos/cloud-download-svgrepo-com.svg" height="75px"></span>
-                    <span style="--i:15;"><img src="../iconos/gallery-download-svgrepo-com.svg" height="75px"></span>
+                    <img src="iconos/" alt="">
+                    <span style="--i:1;"><img src="iconos/mouse-svgrepo-com.svg" height="70px"></span>
+                    <span style="--i:2;"><img src="iconos/software-developer-work-on-computer-programmer-coder-svgrepo-com.svg" height="75px"></span>
+                    <span style="--i:3;"><img src="iconos/screencast-svgrepo-com.svg" height="75px"></span>
+                    <span style="--i:4;"><img src="iconos/software-svgrepo-com.svg" height="75px"></span>
+                    <span style="--i:5;"><img src="iconos/translation-svgrepo-com.svg" height="75px"></span>
+                    <span style="--i:6;"><img src="iconos/code-merge-svgrepo-com.svg" height="75px"></span>
+                    <span style="--i:7;"><img src="iconos/code-file-svgrepo-com.svg" height="75px"></span>
+                    <span style="--i:8;"><img src="iconos/software-platform-computer-software-system-svgrepo-com.svg" height="75px"></span>
+                    <span style="--i:9;"><img src="iconos/copy-svgrepo-com.svg" height="75px"></span>
+                    <span style="--i:10;"><img src="iconos/code-svgrepo-com.svg" height="75px"></span>
+                    <span style="--i:11;"><img src="iconos/file-smile-svgrepo-com.svg" height="75px"></span>
+                    <span style="--i:12;"><img src="iconos/annotation-user-svgrepo-com.svg" height="70px"></span>
+                    <span style="--i:13;"><img src="iconos/folder-cloud-svgrepo-com.svg" height="75px"></span>
+                    <span style="--i:14;"><img src="iconos/cloud-download-svgrepo-com.svg" height="75px"></span>
+                    <span style="--i:15;"><img src="iconos/gallery-download-svgrepo-com.svg" height="75px"></span>
                 </div>
             </div>
             <div class="background-circle">
@@ -246,13 +246,13 @@ if (isset($_SESSION["usuario"])) {
     <section id="carrucel">
     <div class="carousel-container">
         <div class="carousel-slide">
-            <img src="../imagenes/Presentación Astronauta Azul Oscuro.jpg" alt="Imagen 1">
+            <img src="imagenes/Presentación Astronauta Azul Oscuro.jpg" alt="Imagen 1">
         </div>
         <div class="carousel-slide">
-            <img src="../imagenes/2.jpg" alt="Imagen 2">
+            <img src="imagenes/2.jpg" alt="Imagen 2">
         </div>
         <div class="carousel-slide">
-            <img src="../imagenes/oo.jpg" alt="Imagen 3">
+            <img src="imagenes/oo.jpg" alt="Imagen 3">
         </div>
     </div>
     </section>
@@ -274,7 +274,7 @@ if (isset($_SESSION["usuario"])) {
                         <p></p>
                     </div>
                 </div>
-                <img src="../imagenes/Error 404 __ Web concept series.jfif" alt="" class="project-img-2">
+                <img src="imagenes/Error 404 __ Web concept series.jfif" alt="" class="project-img-2">
             </div>
 
             <div class="all-projects">
@@ -301,7 +301,7 @@ if (isset($_SESSION["usuario"])) {
                         <p></p>
                     </div>
                 </div>
-                <img src="../imagenes/Atelier _ Brand Identity.jfif" alt="" class="project-img-1">
+                <img src="imagenes/Atelier _ Brand Identity.jfif" alt="" class="project-img-1">
             </div>
             <div class="project-card project-card-3">
                 <div class="title">
@@ -312,7 +312,7 @@ if (isset($_SESSION["usuario"])) {
                         <p></p>
                     </div>
                 </div>
-                <img src="../imagenes/Cursos de AutoCAD Civil 3D para empresas en Barcelona.jfif" alt="" class="project-img-3">
+                <img src="imagenes/Cursos de AutoCAD Civil 3D para empresas en Barcelona.jfif" alt="" class="project-img-3">
             </div>
         </div>
     </section>
