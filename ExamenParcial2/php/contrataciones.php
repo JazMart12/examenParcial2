@@ -252,7 +252,7 @@ if (isset($_SESSION["usuario"])) {
                         <label for="file">Subir tu foto</label>    
                         <input type="file" name="file" id="file" class="form-control-file">
                     </div><br>
-                    <button type="submit" class="btn btn-dark">Enviar</button>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
                 </form>
             </div>
         </div>
