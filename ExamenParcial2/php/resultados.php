@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Resultados</title>
+    <link rel="stylesheet" href="../style_resultados.css">
 <?php
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\SMTP;
@@ -15,10 +22,10 @@
             $tot++; 
     }
     if($tot <= 6){
-        $mensaje = "Lamentamos informarle que su resoltado no fue suficiente";
+        $mensaje = "<h2>Lamentamos informarle que su resoltado no fue suficiente</h2>";
         echo '<h1>Reprobaste</h1>';    
     }else{
-        $mensaje = "Felicidades, aprobaste el examen, en la brevedad nos contactaremos contigo";
+        $mensaje = "<h2>Felicidades, aprobaste el examen, en la brevedad nos contactaremos contigo</h2>";
         echo '<h1>Aprobaste</h1>';
     }
     echo '<h2>Calificacion = '.$tot.'</h2>';
