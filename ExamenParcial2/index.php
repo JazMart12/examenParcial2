@@ -1,10 +1,16 @@
 <?php
 if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-  }
-  ob_start();
-  $config['base_url'] = 'http://' . $_SERVER["SERVER_NAME"];
-
+  session_start();
+}
+ob_start();
+$config['base_url'] = 'http://' . $_SERVER["SERVER_NAME"];
+//el if solo cuando son paguinas que sin session no se inician
+if (!isset($_SESSION["usuario"])) {
+  header("Location: login.php");
+  exit();
+}
+?>
+ <?php 
 // Verificar si hay una sesión activa
 //session_start();
 if (isset($_SESSION["usuario"])) {
@@ -45,7 +51,7 @@ if (isset($_SESSION["usuario"])) {
         <div>
             <ul class="navbar-menu">
                 <li><a class="active" href="index.php">&lt; Inicio &gt;</a></li>
-                <li><a class="" href="servicios.php">Servicios</a></li>
+                <li><a class="" href="Servicios.php">Servicios</a></li>
                 <li><a class="" href="contacto.php">Contacto</a></li>
                 <?php
                     if(!$sesionActiva){

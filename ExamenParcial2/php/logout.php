@@ -4,8 +4,11 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 ob_start();
 $config['base_url'] = 'http://' . $_SERVER["SERVER_NAME"];
-?>
-<?php
+//el if solo cuando son paguinas que sin session no se inician
+if (!isset($_SESSION["usuario"])) {
+  header("Location: login.php");
+  exit();
+}
 
 
 //session_start();
