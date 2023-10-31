@@ -7,7 +7,7 @@
     <script src="https://kit.fontawesome.com/e674bba739.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="../style.css">
-    <link rel="icon" type="image/x-icon" href="imagenes/logo-ConvertImage.ico">
+    <link rel="icon" type="image/x-icon" href="../imagenes/logo-ConvertImage.ico">
     <style>
         .tit-exam{
             font-weight: 800;
@@ -26,9 +26,6 @@
         }
         #footer{
             padding-top: 30px;
-        }
-        .input-form{
-
         }
 
     </style>
@@ -49,8 +46,8 @@
         <div>
             <ul class="navbar-menu">
                 <li><a class="" href="../index.php">Inicio</a></li>
-                <li><a class="active" href="../Servicios.php">&lt; Servicios &gt;</a></li>
-                <li><a class="" href="../contacto.php">Contacto</a></li>
+                <li><a class="active" href="../Servicios.html">&lt; Servicios &gt;</a></li>
+                <li><a class="" href="../contacto.html">Contacto</a></li>
             </ul>
         </div>
         <div>
@@ -128,86 +125,6 @@
             exit();
         }
     ?>
-<<<<<<< HEAD
-<h1>Examen de conocimientos</h1>
-
-  <form class="exam">
-    <ol>
-      <li>
-        <p>1. ¿Qué es un bucle?</p>
-        <input type="radio" name="q1" value="A"> A) Una función en Python.<br>
-        <input type="radio" name="q1" value="B"> B) Una estructura de control que repite una serie de instrucciones.<br>
-        <input type="radio" name="q1" value="C"> C) Un tipo de variable en Java.<br>
-        <input type="radio" name="q1" value="D"> D) Un error en un programa.<br>
-      </li>
-      <li>
-        <p>2. ¿Qué es la programación orientada a objetos (POO)?</p>
-        <input type="radio" name="q2" value="A"> A) Un lenguaje de programación.<br>
-        <input type="radio" name="q2" value="B"> B) Un paradigma de programación que utiliza objetos como componentes de software.<br>
-        <input type="radio" name="q2" value="C"> C) Un tipo de base de datos.<br>
-        <input type="radio" name="q2" value="D"> D) Un sistema operativo.<br>
-      </li>
-      <li>
-        <p>3.  ¿Cuál es la función principal de una variable en programación?</p>
-        <input type="radio" name="q3" value="A"> A) Almacenar datos temporales.<br>
-        <input type="radio" name="q3" value="B"> B) Imprimir texto en la pantalla.<br>
-        <input type="radio" name="q3" value="C"> C) Ejecutar una función.<br>
-        <input type="radio" name="q3" value="D"> D) Controlar el flujo de un programa.<br>
-      </li>
-      <li>
-        <p>4.  ¿Qué significa "DRY" en programación?</p>
-        <input type="radio" name="q4" value="A"> A)	No programar en días de lluvia.<br>
-        <input type="radio" name="q4" value="B"> B)	"Don't Repeat Yourself", un principio que promueve la reutilización de código.<br>
-        <input type="radio" name="q4" value="C"> C)	Una herramienta de desarrollo web.<br>
-        <input type="radio" name="q4" value="D"> D)	Una palabra clave en C++.<br>
-      </li>
-      <li>
-        <p>5. ¿Cuál es el propósito principal de un array en programación?</p>
-        <input type="radio" name="q5" value="A"> A)	Almacenar una única variable.<br>
-        <input type="radio" name="q5" value="B"> B)	Realizar operaciones matemáticas.<br>
-        <input type="radio" name="q5" value="C"> C)	Almacenar múltiples valores del mismo tipo.<br>
-        <input type="radio" name="q5" value="D"> D)	Controlar el flujo de un programa.<br>
-      </li>
-      <li>
-        <p>6. ¿Qué es la depuración en programación?</p>
-        <input type="radio" name="q6" value="A"> A)	Un proceso de ocultar errores en el código.<br>
-        <input type="radio" name="q6" value="B"> B)	Un proceso de eliminar el código innecesario.<br>
-        <input type="radio" name="q6" value="C"> C)	Un proceso de encontrar y corregir errores en el código.<br>
-        <input type="radio" name="q6" value="D"> D)	Un proceso de crear un nuevo programa.<br>
-      </li>
-      <li>
-        <p>7. ¿Qué es un algoritmo?</p>
-        <input type="radio" name="q7" value="A"> A)	Un error en un programa.<br>
-        <input type="radio" name="q7" value="B"> B)	Un conjunto de instrucciones para resolver un problema.<br>
-        <input type="radio" name="q7" value="C"> C)	Un lenguaje de programación.<br>
-        <input type="radio" name="q7" value="D"> D)	Un sistema operativo.<br>
-      </li>
-      <li>
-        <p>8. ¿Qué es la recursividad en programación?</p>
-        <input type="radio" name="q8" value="A"> A)	Un tipo de error de lógica.<br>
-        <input type="radio" name="q8" value="B"> B)	Un bucle que se ejecuta infinitamente.<br>
-        <input type="radio" name="q8" value="C"> C)	Un enfoque en el que una función se llama a sí misma para resolver un problema.<br>
-        <input type="radio" name="q8" value="D"> D)	Una estructura de datos en Python.<br>
-      </li>
-      <li>
-        <p>9. ¿Cuál es el propósito de un IDE (Entorno de Desarrollo Integrado) en programación?</p>
-        <input type="radio" name="q9" value="A"> A)	Imprimir código en papel.<br>
-        <input type="radio" name="q9" value="B"> B)	Ejecutar programas en un servidor.<br>
-        <input type="radio" name="q9" value="C"> C)	Proporcionar herramientas para escribir, depurar y compilar código.<br>
-        <input type="radio" name="q9" value="D"> D)	Controlar la velocidad de ejecución de un programa.<br>
-      </li>
-      <li>
-        <p>10. ¿?</p>
-        <input type="radio" name="q10" value="A"> A)	Un sistema de clasificación de lenguajes de programación.<br>
-        <input type="radio" name="q10" value="B"> B)	Una técnica para ocultar el código fuente.<br>
-        <input type="radio" name="q10" value="C"> C)	Un proceso de seguimiento de cambios en el código a lo largo del tiempo.<br>
-        <input type="radio" name="q10" value="D"> D)	Un método para optimizar algoritmos.<br>
-      </li>
-    </ol>
-    <button type="submit">Enviar Respuestas</button>
-  </form>
-=======
->>>>>>> 182a04a84434ffb68d12ad6b9bbb5740b655b994
 
     <form action="preguntas.php" method="post">
         <div class="form-group">
