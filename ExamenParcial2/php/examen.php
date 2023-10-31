@@ -24,8 +24,8 @@
         <div>
             <ul class="navbar-menu">
                 <li><a class="" href="../index.php">Inicio</a></li>
-                <li><a class="active" href="../Servicios.html">&lt; Servicios &gt;</a></li>
-                <li><a class="" href="../contacto.html">Contacto</a></li>
+                <li><a class="active" href="../Servicios.php">&lt; Servicios &gt;</a></li>
+                <li><a class="" href="../contacto.php">Contacto</a></li>
             </ul>
         </div>
         <div>
@@ -74,7 +74,6 @@
         }
         
     ?>
-<<<<<<< HEAD
 <h1>Examen de conocimientos</h1>
 
   <form class="exam">
@@ -152,10 +151,6 @@
     </ol>
     <button type="submit">Enviar Respuestas</button>
   </form>
-
-
-=======
->>>>>>> 48c5a391757cc1ac8c5fb0cf2ed418c3cbba1dd0
 
     <form action="preguntas.php" method="post">
         <div class="form-group">

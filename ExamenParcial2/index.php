@@ -1,6 +1,6 @@
 <?php
 // Iniciar o reanudar una sesión
-session_start();
+
 
 // Verificar si hay una sesión activa
 if (isset($_SESSION["usuario"])) {
@@ -9,6 +9,7 @@ if (isset($_SESSION["usuario"])) {
     $sesionActiva = true;
 }
 
+//die();
 ?>
 
 <!DOCTYPE html>
@@ -23,6 +24,7 @@ if (isset($_SESSION["usuario"])) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="../imagenes/logo-ConvertImage.ico">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="styles.css">
 
 </head>
 
@@ -38,7 +40,7 @@ if (isset($_SESSION["usuario"])) {
         </div>
         <div>
             <ul class="navbar-menu">
-                <li><a class="active" href="index.php">&lt;Inicio&gt;</a></li>
+                <li><a class="active" href="index.php">&lt; Inicio &gt;</a></li>
                 <li><a class="" href="servicios.php">Servicios</a></li>
                 <li><a class="" href="contacto.php">Contacto</a></li>
                 <?php

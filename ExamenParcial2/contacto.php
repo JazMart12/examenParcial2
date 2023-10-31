@@ -1,6 +1,6 @@
 <?php
 // Iniciar o reanudar una sesión
-session_start();
+
 
 // Verificar si hay una sesión activa
 if (isset($_SESSION["usuario"])) {
@@ -8,6 +8,8 @@ if (isset($_SESSION["usuario"])) {
 } else {
     $sesionActiva = true;
 }
+//var_dump($_SESSION["usuario"]);
+//die();
 ?>
 
 <!DOCTYPE html>
@@ -19,15 +21,13 @@ if (isset($_SESSION["usuario"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Crafters</title>
     <script src="https://kit.fontawesome.com/e674bba739.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="icon" type="image/x-icon" href="../imagenes/logo-ConvertImage.ico">
 
-
 </head>
-<body style="background-color: #222;">
 
-    <!-- Encabezado -->
+<body>
     <section id="header">
         <div class="navbar-title">
             <h3 class="title-first-name" style="font-weight: 900; font-size: 40px;">
@@ -37,11 +37,8 @@ if (isset($_SESSION["usuario"])) {
                 Crafters
             </h3>
         </div>
-        <div class="menu-icon" id="menu-icon">
-            <i class="fas fa-bars"></i>
-        </div>
-        <div class="navbar-menu" id="navbar-menu">
-            <ul>
+        <div>
+            <ul class="navbar-menu">
                 <li><a class="" href="index.php">Inicio</a></li>
                 <li><a class="" href="servicios.php">Servicios</a></li>
                 <li><a class="active" href="contacto.php">&lt; Contacto &gt;</a></li>
@@ -50,13 +47,11 @@ if (isset($_SESSION["usuario"])) {
                         echo '<li><a href="php/contrataciones.php">Contrataciones</a></li>';
                     }
                 ?>
+                
+                
             </ul>
+            
         </div>
-        <script>
-            document.getElementById("menu-icon").addEventListener("click", function () {
-                document.getElementById("navbar-menu").classList.toggle("active");
-            });
-        </script>
         <div>
             <ul class="social-media">
                 <li>
@@ -69,7 +64,6 @@ if (isset($_SESSION["usuario"])) {
                 </li>
             </ul>
         </div>
-
         <div >
             <ul class="nav navbar-nav flex-row justify-content-between ml-auto">
                 <li class="nav-item order-2 order-md-1"><a href="#" class="nav-link" title="settings"><i class="fa fa-cog fa-fw fa-lg"></i></a></li>
@@ -91,7 +85,7 @@ if (isset($_SESSION["usuario"])) {
                                 </div>
                                  
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-primary btn-block">Login</button>
+                                    <button type="submit" class="bt n btn-primary btn-block">Login</button>
                                 </div>
                                 <div class="form-group text-center">
                             
@@ -118,7 +112,6 @@ if (isset($_SESSION["usuario"])) {
                 </li>
             </ul>
         </div>
-        
     </section>
 <!-- fin Encabezado -->
 
@@ -247,8 +240,8 @@ width="1525" height="450" style="border:0;" allowfullscreen="" loading="lazy" re
           </script>
 
     </section>
-    <!-- fin de pie de pagina -->
-    <script src="script.js"></script>
+    <!-- fin de pie de pagina 
+    <script src="script.js"></script> -->
 </body>
 
 </html>
