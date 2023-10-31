@@ -1,8 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Source+Code+Pro:wght@200;300;400;500;600;700;800;900&display=swap");
 
+body{
+    background-image: url('imagenes/fondo2.jpg'); /* Reemplaza 'ruta-de-tu-imagen.jpg' con la ruta de tu imagen de fondo */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    text-align: center;
+    font-family: "Source Code Pro", monospace;
+}
 h2{
-    color: rgb(10, 10, 10);
+    font-size: 24px;
+    color: #fff; /* Color del texto para la calificación */
+    padding: 10px;
+    border-radius: 10px;
+   font-size: 35px;
 }
 h1{
-    color: rgb(10, 10, 10);
+    font-size: 36px;
+    color: #fff; /* Color del texto para "Aprobaste" o "Reprobaste" */
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block; 
+    font-size: 50px;
 }
