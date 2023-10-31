@@ -1,17 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Source+Code+Pro:wght@200;300;400;500;600;700;800;900&display=swap");
+
 body {
     background-color: #222;
-    text-align: center;
+    font-family: "Raleway", sans-serif;
+    font-family: "Source Code Pro", monospace;
 }
-h3 {
+#ti {
     color: #f7f0f0;
+    text-align: center;
+    font-size: 50px;
 }
+#ti:hover{
+    color:  #6aca67;
+}
+
 form {
-    max-width: 600px;
+    max-width: 1200px;
     margin: 0 auto;
-    background-color: #222020;
+    background-color: #726d6d;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   border-radius: 10px;
 }
 label {
     display: block;
@@ -19,14 +27,25 @@ label {
     margin-top: 10px;
 }
 p {
-    font-weight: bold;
+    font-weight: 800;
     margin-bottom: 5px;
+    text-align: left;
+    padding: 30px;
+    margin: 20px;
+    font-size: 20px;
+
 }
 input[type="radio"] {
-    margin-right: 5px;
+    margin-right: 10px;
+    font-size: 23px;
+    padding: 30px;
+    margin: 20px;
+
+
+
 }
 input[type="submit"] {
-    background-color: #484f57;
+    background-color: #4953df;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -34,5 +53,5 @@ input[type="submit"] {
     cursor: pointer;
 }
 input[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #6aca67;
 }

@@ -8,6 +8,30 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="../style.css">
     <link rel="icon" type="image/x-icon" href="../../imagenes/logo-ConvertImage.ico">
+    <style>
+        .tit-exam{
+            font-weight: 800;
+            color: #64f4ac;
+            padding-bottom: 15px;
+            text-align: center;
+        }
+        .form-group{
+            padding-top: 100px;
+            text-align: center;
+
+        }
+        label{
+            color: white;
+
+        }
+        #footer{
+            padding-top: 30px;
+        }
+        .input-form{
+
+        }
+
+    </style>
   
 </head>
 
@@ -83,11 +107,17 @@
     <form action="preguntas.php" method="post">
         <div class="form-group">
             <label for="codigo">Ingresa tu codigo:</label>
-            <input type="text" class="input-form" require name="codigo" id="codigo">
-            <input type="submit" class="btn btn-dark" value="Enviar">
+            <input type="text" class="input-form" require name="codigo" id="codigo"><br>
+            <br>
+            <br>
+            <input type="submit" class="btn btn-primary" value="Enviar">
         </div>
-    </form>
-
+    </form>
+<br>
+<br>
+<br>
+<br>
+<br>
     <section id="footer">
     <div class="footer-left">
         <h2>Vamos Hagamos cosas increibles juntos!</h2>
