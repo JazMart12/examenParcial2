@@ -59,12 +59,12 @@
         $mail->isSMTP();
         $mail->Host = 'smtp.office365.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'Dokkabaelol69@outlook.com';
-        $mail->Password = 'Dokkabae69';
+        $mail->Username = 'nanashi5023@outlook.com';
+        $mail->Password = 'Qwerty##5023';
         $mail->SMTPSecure = 'STARTTLS';
         $mail->Port = 587;
 
-        $mail->setFrom('Dokkabaelol69@outlook.com');
+        $mail->setFrom('nanashi5023@outlook.com');
         $mail->addAddress($correo);
 
         $mail->isHTML(true);
