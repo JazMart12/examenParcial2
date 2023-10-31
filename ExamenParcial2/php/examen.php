@@ -92,8 +92,33 @@
         }
         fclose($file);
 
-        if(!$band){
+        if($band==0){
             echo '<script> window.alert("Por favor consigue tu clave de acceso rellenando el formulario");</script>';
+            $domain = $_SERVER['HTTP_HOST'];
+            $scheme = $_SERVER['REQUEST_SCHEME'];
+            $uri = $_SERVER['REQUEST_URI'];
+            $uri = substr($uri,0,-14);// Elimina los últimos 14 caracteres
+            $url =  $scheme . "://" . $domain. $uri;
+            echo '<script>window.location="'.$url.'"</script>'; 
+            exit();
+        }
+
+        $file2 = fopen("examen.txt", "r");
+        $band2 = 0; //para saber si el usuario ya hizo el examen
+        while (!feof($file2)) {
+            $linea = fgets($file2);
+            if ($linea != "") {
+                $aux = preg_split("/[\s,]+/", $linea); 
+                $existe = $aux[0];
+                if ($existe === $usuario) {
+                    $band2 = 1;
+                    break;
+                }
+            }
+        }
+        fclose($file2);
+        if($band2==1){
+            echo '<script> window.alert("El usuario ya realizo el examen");</script>';
             $domain = $_SERVER['HTTP_HOST'];
             $scheme = $_SERVER['REQUEST_SCHEME'];
             $uri = $_SERVER['REQUEST_URI'];

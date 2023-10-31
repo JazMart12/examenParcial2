@@ -45,6 +45,10 @@
             }
         }
     }
+
+    if($band==0){
+        $correo = "example@gmail.com";
+    }
     fclose($file);
     //Enviar resultado al correo
     $asunto = "Resultados Examen";
@@ -55,12 +59,12 @@
         $mail->isSMTP();
         $mail->Host = 'smtp.office365.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'Dokkabaelol69@outlook.com';
-        $mail->Password = 'Dokkabae69';
+        $mail->Username = 'nanashi5023@outlook.com';
+        $mail->Password = 'Qwerty##5023';
         $mail->SMTPSecure = 'STARTTLS';
         $mail->Port = 587;
 
-        $mail->setFrom('Dokkabaelol69@outlook.com');
+        $mail->setFrom('nanashi5023@outlook.com');
         $mail->addAddress($correo);
 
         $mail->isHTML(true);
@@ -71,4 +75,17 @@
     } catch (Exception $e) {
         echo 'Error al enviar el correo: ' . $mail->ErrorInfo;
     }
+
+    $file2 = fopen("examen.txt","a+");
+    fwrite($file2, $usuario."\r\n");
+    fclose($file2);
+
+    $domain = $_SERVER['HTTP_HOST'];
+    $scheme = $_SERVER['REQUEST_SCHEME'];
+    $uri = $_SERVER['REQUEST_URI'];
+    $uri = substr($uri, 0, -19); // Elimina los últimos 19 caracteres
+    
+    $newURL = $scheme . "://" . $domain . $uri;
+    
+    header("Refresh: 10; URL=" . $newURL);
 ?>
