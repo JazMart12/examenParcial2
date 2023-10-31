@@ -1,3 +1,10 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+  session_start();
+}
+ob_start();
+$config['base_url'] = 'http://' . $_SERVER["SERVER_NAME"];
+?>
 <head>
     <title>Subir imagen</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
@@ -7,7 +14,7 @@
 
 
     <?php
-     session_start();
+     //session_start();
      $_SESSION["nombre"] = $_POST["nombre"];
      $_SESSION["apellido1"] = $_POST["apellido1"];
      $_SESSION["apellido2"] = $_POST["apellido2"];

@@ -1,3 +1,10 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+  session_start();
+}
+ob_start();
+$config['base_url'] = 'http://' . $_SERVER["SERVER_NAME"];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +19,7 @@
     require 'PHPMailer.php';
     require 'SMTP.php';
 
-    session_start();
+    //session_start();
     $usuario = $_SESSION["usuario"];
     $tot = 0;
     //$resultados = array();

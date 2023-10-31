@@ -43,7 +43,7 @@ require '../index.php';
     # Luego de haber obtenido los valores, ya podemos comprobar:
     if ($band == 1) {
 
-        session_start();
+        //session_start();
         $_SESSION["usuario"] = $usuario;
 
        //$url = "http://localhost/cursophp/examenParcial2/ExamenParcial2/php/bienvenida.php";

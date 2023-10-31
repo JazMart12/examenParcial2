@@ -1,6 +1,13 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+  session_start();
+}
+ob_start();
+$config['base_url'] = 'http://' . $_SERVER["SERVER_NAME"];
+?>
 <?php 
     require('fpdf.php');
-    session_start();
+    //session_start();
      $nombre = $_SESSION["nombre"];
      $apellido1 = $_SESSION["apellido1"];
      $apellido2 = $_SESSION["apellido2"];
@@ -111,7 +118,7 @@ $pdf->Cell(0, 10, '____________________________', 0, 1, 'C');
 $pdf->Cell(0, 10, 'Director Carlos C. Contreras', 0, 1, 'C');
 
 // Guarda y muestra el PDF
-$pdf->Output();
+$pdf->Output('D', 'datos_usuario.pdf');
 exit;
 
 ?>

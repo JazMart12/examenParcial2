@@ -1,9 +1,12 @@
 <?php
-// Iniciar o reanudar una sesión
-
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+  }
+  ob_start();
+  $config['base_url'] = 'http://' . $_SERVER["SERVER_NAME"];
 
 // Verificar si hay una sesión activa
-session_start();
+//session_start();
 if (isset($_SESSION["usuario"])) {
     $sesionActiva = false;
 } else {

@@ -1,3 +1,10 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+  session_start();
+}
+ob_start();
+$config['base_url'] = 'http://' . $_SERVER["SERVER_NAME"];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -69,7 +76,7 @@
 <h1 class="tit-exam">Exámen de conocimientos</h1>
 
     <?php
-        session_start();
+        //session_start();
         $usuario = $_SESSION["usuario"];    
         $clave = "";
         $file = fopen("claves.txt", "r");

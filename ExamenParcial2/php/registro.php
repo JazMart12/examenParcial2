@@ -1,6 +1,11 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+  session_start();
+}
+ob_start();
+$config['base_url'] = 'http://' . $_SERVER["SERVER_NAME"];
+?>
 <body>
-    
-
 <?php
  
 require '../index.php';
