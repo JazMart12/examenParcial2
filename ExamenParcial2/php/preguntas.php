@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Examen</title>
+    <link rel="stylesheet" href="../style_preguntas.css">
 </head>
 <body>
     <?php
@@ -40,12 +41,12 @@
     $preg1 = '<p> .¿Qué es un bucle?</p>';
     $preg2 = '<p> .¿Qué es la programación orientada a objetos (POO)?</p>';
     $preg3 = '<p> .¿Cuál es la función principal de una variable en programación?</p>';
-    $preg4 = '<p> .¿Qué significa "DRY" en programación?</p>';
-    $preg5 = '<p> .¿Cuál es el propósito principal de un array en programación?</p>';
-    $preg6 = '<p> .¿Qué es la depuración en programación?</p>';
-    $preg7 = '<p> .¿Qué es un algoritmo?</p>';
-    $preg8 = '<p> .¿Qué es la recursividad en programación?</p>';
-    $preg9 = '<p> .¿Cuál es el propósito de un IDE (Entorno de Desarrollo Integrado) en programación?</p>';
+    $preg4 = '<p> .¿Qué significa "DRY" en programación?</p><br>';
+    $preg5 = '<p> .¿Cuál es el propósito principal de un array en programación?</p><br>';
+    $preg6 = '<p> .¿Qué es la depuración en programación?</p><br>';
+    $preg7 = '<p> .¿Qué es un algoritmo?</p><br>';
+    $preg8 = '<p> .¿Qué es la recursividad en programación?</p><br>';
+    $preg9 = '<p> .¿Cuál es el propósito de un IDE (Entorno de Desarrollo Integrado) en programación?</p><br>';
     $preg10 = '<p> .¿Qué es el versionado de código?</p>';
 
     $preguntas = array(0 => $preg1,1=>$preg2,2 =>$preg3,3=>$preg4,
@@ -104,7 +105,7 @@
         '<input type="radio" name="q10" value="false">Un método para optimizar algoritmos.<br>')
     );
     ?>
-    <h3>Examen de seleccion</h3>
+    <h3 id="ti">Exámen de selección</h3>
     <h2></h2>
     <form method="post" action="resultados.php">
     <legend>Usuario: <?php echo $usuario?></legend>
@@ -122,7 +123,7 @@
             }
         ?>
 
-        <input type="submit" value="enviar">
+        <input class="botonsito" type="submit" value="Enviar">
     </form>
 </body>
 </html>

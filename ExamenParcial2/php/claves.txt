@@ -1,4 +1,7 @@
 
+<<<<<<< HEAD
 carlos psRmDPjv
 carlos Este usuario ya tiene una clave
 gaby AMRS!nTN
+=======
+>>>>>>> 182a04a84434ffb68d12ad6b9bbb5740b655b994

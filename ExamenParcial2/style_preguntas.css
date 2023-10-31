@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Source+Code+Pro:wght@200;300;400;500;600;700;800;900&display=swap");
+
+body {
+    background-color: #222;
+    font-family: "Raleway", sans-serif;
+    font-family: "Source Code Pro", monospace;
+}
+#ti {
+    color: #f7f0f0;
+    text-align: center;
+    font-size: 50px;
+}
+#ti:hover{
+    color:  #6aca67;
+}
+
+form {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #726d6d;
+    padding: 20px;
+   border-radius: 10px;
+}
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+p {
+    font-weight: 800;
+    margin-bottom: 5px;
+    text-align: left;
+    padding: 30px;
+    margin: 20px;
+    font-size: 20px;
+
+}
+input[type="radio"] {
+    margin-right: 10px;
+    font-size: 23px;
+    padding: 30px;
+    margin: 20px;
+
+
+
+}
+input[type="submit"] {
+    background-color: #4953df;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #6aca67;
+}

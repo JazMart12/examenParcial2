@@ -4,7 +4,21 @@
 session_start();
 
  
-$_SESSION['usuario']="";
+    $_SESSION['usuario']="";
+    $_SESSION["nombre"]="";
+    $_SESSION["apellido1"]="";
+     $_SESSION["apellido2"]="";
+    $_SESSION["dia"]="";
+    $_SESSION["mes"]="";
+    $_SESSION["anio"]="";
+    $_SESSION["correo"]="";
+    $_SESSION["telefono"]="";
+     $_SESSION["imagen"]="";
+    $_SESSION["lenguajes"]="";
+     $_SESSION["ingles"]="";
+    $_SESSION["viajar"]="";
+    $_SESSION["puesto"]="";
+    
 session_destroy();
 $domain = $_SERVER['HTTP_HOST'];
 $scheme = $_SERVER['REQUEST_SCHEME'];
