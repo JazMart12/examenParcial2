@@ -1,9 +1,14 @@
 <?php
 if (session_status() == PHP_SESSION_NONE) {
-  session_start();
-}
-ob_start();
-$config['base_url'] = 'http://' . $_SERVER["SERVER_NAME"];
+    session_start();
+  }
+  ob_start();
+  $config['base_url'] = 'http://' . $_SERVER["SERVER_NAME"];
+  //el if solo cuando son paguinas que sin session no se inician
+  if (!isset($_SESSION["usuario"])) {
+    header("Location: login.php");
+    exit();
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,12 +18,14 @@ $config['base_url'] = 'http://' . $_SERVER["SERVER_NAME"];
     <title> Resultados</title>
     <link rel="stylesheet" href="../style_resultados.css">
 <?php
+    require 'vendor/autoload.php';
+    //require 'SMTP.php';
+    //require '/home/username/path-to-vendor-dir/vendor/autoload.php';
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\SMTP;
+    use PHPMailer\PHPMailer\Exception;
     
-    require 'PHPMailer.php';
-    require 'SMTP.php';
-
+   
     //session_start();
     $usuario = $_SESSION["usuario"];
     $tot = 0;
