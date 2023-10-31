@@ -60,7 +60,7 @@
                    $domain = $_SERVER['HTTP_HOST'];
                    $scheme = $_SERVER['REQUEST_SCHEME'];
                    $uri = $_SERVER['REQUEST_URI'];
-                   $uri = substr($uri, 0, -17); // Elimina los últimos 14 caracteres
+                   $uri = substr($uri, 0, -18); // Elimina los últimos 14 caracteres
                    $_SESSION["imagen"] = $targetFile;
                    $newURL = $scheme . "://" . $domain . $uri;
                    
