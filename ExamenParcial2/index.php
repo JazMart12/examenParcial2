@@ -3,6 +3,7 @@
 
 
 // Verificar si hay una sesión activa
+session_start();
 if (isset($_SESSION["usuario"])) {
     $sesionActiva = false;
 } else {

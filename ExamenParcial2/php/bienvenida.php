@@ -81,7 +81,7 @@
     $domain = $_SERVER['HTTP_HOST'];
     $scheme = $_SERVER['REQUEST_SCHEME'];
     $uri = $_SERVER['REQUEST_URI'];
-    $uri = substr($uri, 0, -18); // Elimina los últimos 14 caracteres
+    $uri = substr($uri, 0, -19); // Elimina los últimos 14 caracteres
     
     $newURL = $scheme . "://" . $domain . $uri;
     
